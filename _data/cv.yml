@@ -6,92 +6,117 @@
     - name: Date of Birth
       value: 28th October 2003
     - name: Languages
-      value: Chinese, English
+      value: Chinese (native), English (fluent)
 
 - title: Education
   type: time_table
   contents:
-    - title: Bachelor of Biological Science
+    - title: B.S. in Biological Science (Minor in Artificial Intelligence)
       institution: Peking University, Beijing, China
-      year: 2026
+      year: 2022 – 2026
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-#     - title: Federal teaching diploma
-#       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-#       year: 1900
-#       description:
-#         - Description 1.
-#         - Description 2.
+        - Overall GPA: 3.85 / 4.0
+        - Minor GPA: 3.84 / 4.0
+        - Weighted Average: 91.9 / 100.0
+        - Leo KoGuan Scholarship (2024)
+        - National Scholarship (2023)
+        - Second Prize, Chinese Mathematics Competitions (2024)
 
-# - title: Experience
-#   type: time_table
-#   contents:
-#     - title: Professor of Theoretical Physics
-#       institution: Institute for Advanced Study, Princeton University
-#       year: 1933 - 1955
-#       description:
-#         - Description 1.
-#         - Description 2.
-#         - title: Description 3.
-#           contents:
-#             - Sub-description 1.
-#             - Sub-description 2.
-    # - title: Visiting Professor
-    #   institution: California Institute of Technology, Pasadena, California, US
-    #   year: 1933
-    #   description:
-    #     - Description 1.
-    #     - Description 2.
-
-    # - title: Director
-    #   institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-    #   year: 1917-1933
-
-    # - title: Professor of Theoretical Physics
-    #   institution: Karl-Ferdinand University, Prague, Czechoslovakia
-    #   year: 1911 - 1917
-    #   description:
-
-    # - title: Associate Professor of Theoretical Physics
-    #   institution: University of Zurich, Zurich, Switzerland
-    #   year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Research Experience
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Closed-Loop Active Learning for Sparse Neural Encoding in Macaque AIT Cortex
+      institution: Peking University — supervised by Prof. Shiming Tang
+      year: 2025 – 2026
+      description:
+        - Constructed a virtual neural response testbed based on the Maximum Entropy Principle to simulate sparse and specific encoding characteristics of the Macaque AIT cortex.
+        - Developed a GPU-accelerated closed-loop active learning system utilizing novel algorithms to overcome the "sampling miss" bottleneck for extremely sparse neurons.
+        - Formulated the closed-loop sampling process as a Markov Decision Process (MDP) and applied Reinforcement Learning (DQN and PPO) to dynamically optimize retrieval of rare, high-response features.
+    - title: Brain-Inspired Representation Learning via ResNet-JEPA
+      institution: Peking University — supervised by Prof. Shiming Tang
+      year: 2025 – 2026
+      description:
+        - Redesigned the standard CNN-JEPA framework to construct a novel ResNet-JEPA model, inspired by the predictive coding theory of the brain.
+        - Framed self-supervised visual pre-training as a biological predictive process, mimicking how the primate visual cortex continuously anticipates incoming sensory inputs in latent spaces.
+        - Investigated the alignment between the model's latent-space predictive dynamics and hierarchical representational mechanisms in the ventral visual stream.
+    - title: Improvement of Equivariant Graph Neural Networks for 3D Atomistic Systems
+      institution: Peking University — supervised by Prof. Muhan Zhang
+      year: 2024 – 2025
+      description:
+        - Improved the EGNN model based on SOTA model GotenNet, developing the pro-EGNN model.
+        - Combined scalarization-based models and high-degree steerable models, maintaining the ability to encode high-degree geometric features while achieving computational efficiency.
+        - pro-EGNN outperforms the original EGNN on the QM9 dataset for 3D atomistic systems.
+    - title: RNA Editing and RNA Biology
+      institution: Peking University — supervised by Prof. Chengqi Yi (Yilab)
+      year: 2024 – 2025
+      description:
+        - Participated in improving the RESTART RNA editing system and exploring suppressor tRNA biology.
+        - Engineered tRNA with natural and artificial modifications.
+    - title: Function and Regulation of the TCP Gene Family in Arabidopsis and Soybean
+      institution: Peking University — supervised by Prof. Genji Qin
+      year: 2022 – 2023
+      description:
+        - Investigated the regulatory roles of TCP gene family by constructing multiple mutants in Arabidopsis and soybean.
+        - Focused on the roles of TCP genes in leaf development process.
+
+- title: Academic Activities
+  type: time_table
+  contents:
+    - title: Undergraduate Honors Program in Biology (UHPB)
+      institution: Peking University
+      year: 2023 – 2026
+      description:
+        - Weekly journal club sessions sharing the latest developments in cutting-edge biology and interdisciplinary fields.
+        - Presented topics including "Integration of Light and Temperature Signals through Phytochrome B (phyB)", "RNA Editing", "Cell Migration under Confinement", and "Computation in Non-Neuronal Cells".
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2024
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Leo KoGuan Scholarship, Peking University
+        - Second Prize, The Chinese Mathematics Competitions (CMC)
+    - year: 2023
       items:
-        - Max Planck Medal
+        - National Scholarship, Peking University
 
-- title: Academic Interests
+- title: Skills
+  type: map
+  contents:
+    - name: Programming & Computation
+      value: Python (PyTorch, Scipy, Matplotlib, Scikit-learn), MATLAB, R
+    - name: Machine Learning
+      value: Deep Learning, Reinforcement Learning (DQN, PPO), Graph Neural Networks, Self-Supervised Learning, Computer Vision, Natural Language Processing
+    - name: Biology
+      value: Molecular Biology, Biochemistry, Genetics, RNA Biology, Bioinformatics, Plant Biology
+
+- title: Selected Coursework
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Mathematics & Physics
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Probability Theory and Statistics (98)
+        - General Physics I (94), II (A)
+        - Advanced Mathematics I (93), II (91)
+        - Introduction to Modern Physics I (89), II (92)
+        - Linear Algebra (87)
+    - title: Computer Science & AI
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Cognitive Reasoning* (95)
+        - Multi-Agent Systems* (95)
+        - Natural Language Processing with Deep Learning (93)
+        - Machine Learning* (92.5)
+        - Introduction to Robotics (92)
+        - Introduction to Computation (91)
+        - Mathematical Foundation for AI (90)
+        - Early and Mid-Level Computer Vision (90)
+        - Data Structure and Algorithm (87)
+        - Directed Research in AI System (86)
+    - title: Life Sciences & Interdisciplinary
+      items:
+        - AI Methods and Applications in Life Sciences (A)
+        - Mathematical Modeling in Life Sciences (A)
+        - Fundamentals of Network Science and Systems Biology (A)
+        - NeuroAI: From Brain Science to Brain-Inspired Intelligence (90)
+      description:
+        - "* denotes graduate-level courses"
