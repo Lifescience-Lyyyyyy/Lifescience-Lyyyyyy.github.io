@@ -23,4 +23,9 @@ TCP transcription factors play broad roles in plant development. This early rese
 
 This project was supervised by **Prof. Genji Qin** at Peking University.
 
-`Plant genetics` · `Arabidopsis` · `Soybean` · `Molecular biology`
+## Methods & tools
+
+- Plant genetics
+- _Arabidopsis thaliana_
+- Soybean
+- Molecular biology

@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: >
   Biological Science · Artificial Intelligence · Peking University
@@ -21,17 +21,22 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<div class="research-intro">
-  <p class="eyebrow">COMPUTATIONAL NEUROSCIENCE · NEUROAI</p>
-  <h2>I study how biological intelligence computes — and how those principles can shape better artificial systems.</h2>
-  <p>I am a Biological Science graduate from <a href="https://www.pku.edu.cn/">Peking University</a>, with a minor in Artificial Intelligence at <a href="https://yuanpei.pku.edu.cn/">Yuanpei College</a>. My work connects neural computation, representation learning, and closed-loop experimentation.</p>
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">Explore my research</a>
-    <a class="btn btn-outline-primary" href="{{ '/cv/' | relative_url }}">View CV</a>
+<div class="hero-layout">
+  <div class="research-intro">
+    <p class="eyebrow">COMPUTATIONAL NEUROSCIENCE · NEUROAI</p>
+    <h2>I study how biological intelligence computes — and how those principles can shape better artificial systems.</h2>
+    <p>I am a Biological Science graduate from <a href="https://www.pku.edu.cn/">Peking University</a>, with a minor in Artificial Intelligence at <a href="https://yuanpei.pku.edu.cn/">Yuanpei College</a>. My work connects neural computation, representation learning, and closed-loop experimentation.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">Explore my research</a>
+      <a class="btn btn-outline-primary" href="{{ '/cv/' | relative_url }}">View CV</a>
+    </div>
   </div>
+  <figure class="hero-portrait">
+    <img src="{{ '/assets/img/yao-lu-profile.jpg' | relative_url }}" alt="Yao Lu by the sea" loading="eager">
+  </figure>
 </div>
 
-<div class="metric-grid" aria-label="Academic profile highlights">
+<div class="metric-list" aria-label="Academic profile highlights">
   <div class="metric-card"><strong>3.85</strong><span>Overall GPA / 4.0</span></div>
   <div class="metric-card"><strong>5</strong><span>Research projects</span></div>
   <div class="metric-card"><strong>2</strong><span>National & university scholarships</span></div>
@@ -39,7 +44,7 @@ latest_posts:
 
 ## Research focus
 
-<div class="focus-grid">
+<div class="focus-list">
   <div class="focus-card"><span>01</span><h3>Neural computation</h3><p>Understanding sparse neural encoding, information processing, and the computational principles of the visual cortex.</p></div>
   <div class="focus-card"><span>02</span><h3>Brain-inspired learning</h3><p>Building self-supervised systems informed by predictive coding and biological representation learning.</p></div>
   <div class="focus-card"><span>03</span><h3>Intelligent experimentation</h3><p>Using reinforcement learning and active sampling to make biological experiments more efficient and informative.</p></div>
@@ -55,7 +60,18 @@ latest_posts:
 
 ## Education & recognition
 
-**Peking University**, Beijing — B.S. in Biological Science, Minor in Artificial Intelligence, 2022–2026<br>
-Leo KoGuan Scholarship · National Scholarship · Second Prize, Chinese Mathematics Competitions
+<div class="detail-list">
+  <p><strong>Peking University</strong>, Beijing</p>
+  <p>B.S. in Biological Science</p>
+  <p>Minor in Artificial Intelligence</p>
+  <p>2022–2026</p>
+  <p>Leo KoGuan Scholarship</p>
+  <p>National Scholarship</p>
+  <p>Second Prize, Chinese Mathematics Competitions</p>
+</div>
 
-<p class="section-cta"><a href="{{ '/projects/' | relative_url }}">See all research projects →</a> · <a href="{{ '/notes/' | relative_url }}">Read my learning notes →</a></p>
+<div class="section-cta">
+  <a href="{{ '/projects/' | relative_url }}">See all research projects →</a>
+  <a href="{{ '/notes/' | relative_url }}">Read my learning notes →</a>
+  <a href="{{ '/blog/' | relative_url }}">Visit my blog →</a>
+</div>

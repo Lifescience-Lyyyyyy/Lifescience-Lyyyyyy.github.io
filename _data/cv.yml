@@ -4,7 +4,7 @@
     - name: Full Name
       value: Yao Lu
     - name: Languages
-      value: Chinese (native), English (fluent)
+      value: "Chinese (native)<br>English (fluent)"
 
 - title: Education
   type: time_table
@@ -82,11 +82,11 @@
   type: map
   contents:
     - name: Programming & Computation
-      value: Python (PyTorch, Scipy, Matplotlib, Scikit-learn), MATLAB, R
+      value: "Python (PyTorch, SciPy, Matplotlib, Scikit-learn)<br>MATLAB<br>R"
     - name: Machine Learning
-      value: Deep Learning, Reinforcement Learning (DQN, PPO), Graph Neural Networks, Self-Supervised Learning, Computer Vision, Natural Language Processing
+      value: "Deep Learning<br>Reinforcement Learning (DQN, PPO)<br>Graph Neural Networks<br>Self-Supervised Learning<br>Computer Vision<br>Natural Language Processing"
     - name: Biology
-      value: Molecular Biology, Biochemistry, Genetics, RNA Biology, Bioinformatics, Plant Biology
+      value: "Molecular Biology<br>Biochemistry<br>Genetics<br>RNA Biology<br>Bioinformatics<br>Plant Biology"
 
 - title: Selected Coursework
   type: nested_list
@@ -94,9 +94,12 @@
     - title: Mathematics & Physics
       items:
         - Probability Theory and Statistics (98)
-        - General Physics I (94), II (A)
-        - Advanced Mathematics I (93), II (91)
-        - Introduction to Modern Physics I (89), II (92)
+        - General Physics I (94)
+        - General Physics II (A)
+        - Advanced Mathematics I (93)
+        - Advanced Mathematics II (91)
+        - Introduction to Modern Physics I (89)
+        - Introduction to Modern Physics II (92)
         - Linear Algebra (87)
     - title: Computer Science & AI
       items:

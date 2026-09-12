@@ -23,4 +23,9 @@ Can predictive coding — the idea that the brain continually anticipates incomi
 
 This project is supervised by **Prof. Shiming Tang** at Peking University and sits at the intersection of computational neuroscience, computer vision, and representation learning.
 
-`Python` · `PyTorch` · `ResNet` · `JEPA` · `Computer vision`
+## Methods & tools
+
+- Python and PyTorch
+- ResNet architectures
+- Joint-Embedding Predictive Architectures (JEPA)
+- Self-supervised computer vision

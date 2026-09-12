@@ -85,9 +85,9 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Notes # blog_name will be displayed in your notes page
-blog_description: Learning logs on neuroscience, machine learning, mathematics, and biology.
-permalink: /notes/:year/:title/
+blog_name: Blog # blog_name will be displayed in your blog page
+blog_description: Reflections on research, learning, and life at the intersection of biology and AI.
+permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
 # Pagination
@@ -142,6 +142,9 @@ collections:
     defaults:
       layout: post
     output: true
+  notes:
+    output: true
+    permalink: /notes/:name/
   projects:
     output: true
 
@@ -243,9 +246,9 @@ jekyll-archives:
   posts:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
     permalinks:
-      year: "/notes/:year/"
-      tags: "/notes/:type/:name/"
-      categories: "/notes/:type/:name/"
+      year: "/blog/:year/"
+      tags: "/blog/:type/:name/"
+      categories: "/blog/:type/:name/"
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
@@ -434,7 +437,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Material+Icons&display=swap"
   highlightjs:
     integrity:
       css:

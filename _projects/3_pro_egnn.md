@@ -23,4 +23,9 @@ How can an equivariant graph neural network encode expressive higher-degree geom
 
 This course research was supervised by **Prof. Muhan Zhang** at Peking University.
 
-`Graph neural networks` · `Equivariance` · `QM9` · `Geometric deep learning`
+## Methods & tools
+
+- Graph neural networks
+- Equivariant representations
+- QM9 molecular dataset
+- Geometric deep learning

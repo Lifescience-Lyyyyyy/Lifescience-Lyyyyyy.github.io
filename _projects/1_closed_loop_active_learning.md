@@ -23,4 +23,9 @@ Sparse and highly selective neurons are difficult to characterize because most s
 
 This project is supervised by **Prof. Shiming Tang** at Peking University. It brings together experimental design, computational neuroscience, and reinforcement learning.
 
-`Python` · `PyTorch` · `DQN` · `PPO` · `GPU computing`
+## Methods & tools
+
+- Python and PyTorch
+- Deep Q-Networks (DQN)
+- Proximal Policy Optimization (PPO)
+- GPU-accelerated computing

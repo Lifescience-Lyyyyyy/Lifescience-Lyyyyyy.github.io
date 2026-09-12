@@ -8,7 +8,7 @@ categories: [course-notes]
 related_posts: false
 ---
 
-Start writing here. When the note is ready, move this file to `_posts/` and rename it using `YYYY-MM-DD-short-title.md`.
+Start writing here. When the note is ready, copy this file to `_notes/` and rename it using a short descriptive filename such as `predictive-coding.md`.
 
 ## Key idea
 

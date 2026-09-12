@@ -23,4 +23,8 @@ Programmable RNA editing offers a reversible route to modifying gene expression.
 
 This project was supervised by **Prof. Chengqi Yi** in the Yi Lab at Peking University.
 
-`RNA biology` · `tRNA engineering` · `Molecular biology`
+## Methods & tools
+
+- RNA biology
+- tRNA engineering
+- Molecular biology
