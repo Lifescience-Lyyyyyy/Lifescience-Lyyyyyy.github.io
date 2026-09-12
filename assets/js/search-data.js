@@ -4,27 +4,34 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "Research across computational neuroscience, machine learning, and molecular biology.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-notes",
-          title: "notes",
-          description: "",
+          title: "Notes",
+          description: "Structured learning notes on neuroscience, machine learning, mathematics, and biology.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/notes/index.html";
+            window.location.href = "/notes/";
+          },
+        },{id: "nav-blog",
+          title: "Blog",
+          description: "Reflections on research, learning, and life at the intersection of biology and AI.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
           },
         },{id: "nav-cv",
-          title: "cv",
+          title: "CV",
           description: "Yao Lu — Curriculum Vitae. Download the full PDF or browse structured information below.",
           section: "Navigation",
           handler: () => {
