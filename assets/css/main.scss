@@ -23,3 +23,217 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+// Yao Lu portfolio components
+.research-intro {
+  max-width: 760px;
+  padding: 2.2rem 0 1.5rem;
+
+  .eyebrow {
+    color: var(--global-theme-color);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin-bottom: 0.8rem;
+  }
+
+  h2 {
+    font-family: "Roboto Slab", serif;
+    font-size: clamp(2rem, 5vw, 3.45rem);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    margin-bottom: 1.35rem;
+  }
+
+  > p:not(.eyebrow) {
+    color: var(--global-text-color-light);
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+
+  .btn {
+    border-radius: 999px;
+    font-weight: 500;
+    padding: 0.65rem 1.15rem;
+  }
+}
+
+.metric-grid,
+.focus-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 2.3rem 0 3.2rem;
+}
+
+.metric-card,
+.focus-card,
+.notes-empty {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 14px;
+}
+
+.metric-card {
+  padding: 1.25rem;
+
+  strong {
+    color: var(--global-theme-color);
+    display: block;
+    font-family: "Roboto Slab", serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 0.55rem;
+  }
+
+  span {
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+  }
+}
+
+.focus-card {
+  padding: 1.35rem;
+
+  > span {
+    color: var(--global-theme-color);
+    font-family: monospace;
+    font-size: 0.78rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin: 0.9rem 0 0.55rem;
+  }
+
+  p {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.research-timeline {
+  margin: 1.5rem 0 3rem;
+}
+
+.timeline-item {
+  border-top: 1px solid var(--global-divider-color);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 110px 1fr;
+  padding: 1.35rem 0;
+
+  > span,
+  p {
+    color: var(--global-text-color-light);
+  }
+
+  > span {
+    font-family: monospace;
+    font-size: 0.82rem;
+  }
+
+  h3 {
+    font-size: 1.08rem;
+    margin: 0 0 0.4rem;
+  }
+
+  p {
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.section-cta {
+  border-top: 1px solid var(--global-divider-color);
+  margin-top: 2rem;
+  padding-top: 1.3rem;
+}
+
+.projects .card {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 14px;
+  box-shadow: none;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  transition: border-color 160ms ease, transform 160ms ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    transform: translateY(-3px);
+  }
+
+  .card-body {
+    padding: 1.4rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    line-height: 1.35;
+  }
+
+  .card-text {
+    color: var(--global-text-color-light);
+    line-height: 1.55;
+  }
+}
+
+.project-meta {
+  color: var(--global-theme-color);
+  font-family: monospace;
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+}
+
+.notes-empty {
+  margin: 2rem auto;
+  max-width: 620px;
+  padding: 3rem 2rem;
+  text-align: center;
+
+  .notes-empty-icon {
+    color: var(--global-theme-color);
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--global-text-color-light);
+    line-height: 1.65;
+    margin: 0 auto;
+    max-width: 470px;
+  }
+}
+
+@media (max-width: 767px) {
+  .research-intro {
+    padding-top: 1rem;
+  }
+
+  .metric-grid,
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-grid {
+    gap: 0.75rem;
+  }
+
+  .timeline-item {
+    gap: 0.45rem;
+    grid-template-columns: 1fr;
+  }
+}

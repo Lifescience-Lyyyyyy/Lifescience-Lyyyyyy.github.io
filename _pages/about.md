@@ -3,60 +3,59 @@ layout: about
 title: about
 permalink: /
 subtitle: >
-  <a href='https://www.bio.pku.edu.cn/'>School of Life Sciences</a>, <a href='https://yuanpei.pku.edu.cn/'>Yuanpei College</a>, Peking University. Beijing, China.
+  Biological Science · Artificial Intelligence · Peking University
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Peking University, School of Life Sciences</p>
-    <p>No.5 Yiheyuan Road, Haidian District</p>
-    <p>Beijing, 100871, China</p>
+profile: false
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-## About Me
+<div class="research-intro">
+  <p class="eyebrow">COMPUTATIONAL NEUROSCIENCE · NEUROAI</p>
+  <h2>I study how biological intelligence computes — and how those principles can shape better artificial systems.</h2>
+  <p>I am a Biological Science graduate from <a href="https://www.pku.edu.cn/">Peking University</a>, with a minor in Artificial Intelligence at <a href="https://yuanpei.pku.edu.cn/">Yuanpei College</a>. My work connects neural computation, representation learning, and closed-loop experimentation.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">Explore my research</a>
+    <a class="btn btn-outline-primary" href="{{ '/cv/' | relative_url }}">View CV</a>
+  </div>
+</div>
 
-I am a recent graduate from the [School of Life Sciences](https://www.bio.pku.edu.cn/) at [Peking University](https://www.pku.edu.cn/), with a minor in Artificial Intelligence at [Yuanpei College](https://yuanpei.pku.edu.cn/). I am captivated by nature's most intricate puzzle: **the brain** — the biological origins of consciousness and the fundamental principles governing neural computation.
+<div class="metric-grid" aria-label="Academic profile highlights">
+  <div class="metric-card"><strong>3.85</strong><span>Overall GPA / 4.0</span></div>
+  <div class="metric-card"><strong>5</strong><span>Research projects</span></div>
+  <div class="metric-card"><strong>2</strong><span>National & university scholarships</span></div>
+</div>
 
-Recognizing that these profound questions require interdisciplinary solutions, I pursued a rigorous background in both biology and AI. My goal is to work at the intersection of these fields: utilizing **computational neuroscience** to map how the brain processes information, and synergizing these mechanisms with AI to engineer **brain-inspired intelligent systems**.
+## Research focus
 
-## Research Interests
+<div class="focus-grid">
+  <div class="focus-card"><span>01</span><h3>Neural computation</h3><p>Understanding sparse neural encoding, information processing, and the computational principles of the visual cortex.</p></div>
+  <div class="focus-card"><span>02</span><h3>Brain-inspired learning</h3><p>Building self-supervised systems informed by predictive coding and biological representation learning.</p></div>
+  <div class="focus-card"><span>03</span><h3>Intelligent experimentation</h3><p>Using reinforcement learning and active sampling to make biological experiments more efficient and informative.</p></div>
+</div>
 
-- **Computational Neuroscience** — understanding neural computation, encoding, and information processing in biological systems
-- **NeuroAI & Brain-Inspired Machine Learning** — leveraging principles from neuroscience to design more capable AI systems
-- **Computer Vision & Representation Learning** — self-supervised learning, predictive coding, and visual representations
-- **Reinforcement Learning** — applying RL to optimize experimental design and modeling biological decision-making
+## Selected research
 
-## Education
+<div class="research-timeline">
+  <div class="timeline-item"><span>2025–2026</span><div><h3>Closed-loop active learning for sparse neural encoding</h3><p>GPU-accelerated virtual experiments and reinforcement learning for sampling rare high-response features in macaque AIT cortex.</p></div></div>
+  <div class="timeline-item"><span>2025–2026</span><div><h3>Brain-inspired representation learning via ResNet-JEPA</h3><p>A predictive-coding perspective on self-supervised visual learning and hierarchical representations in the ventral visual stream.</p></div></div>
+  <div class="timeline-item"><span>2024–2025</span><div><h3>Equivariant graph neural networks</h3><p>Combining high-degree geometric features with efficient scalarization for 3D atomistic systems.</p></div></div>
+</div>
 
-**Peking University**, Beijing, China — *B.S. in Biological Science (Minor in Artificial Intelligence)*, Sept 2022 – June 2026
-- Overall GPA: **3.85/4.0** — Minor GPA: **3.84/4.0** — Weighted Average: **91.9/100.0**
-- Honors: Leo KoGuan Scholarship (2024), National Scholarship (2023), Second Prize — Chinese Mathematics Competitions (2024)
-- Selected Graduate-Level Coursework: Cognitive Reasoning (95), Multi-Agent Systems (95), NLP with Deep Learning (93), Machine Learning (92.5)
+## Education & recognition
 
-## Research Highlights
+**Peking University**, Beijing — B.S. in Biological Science, Minor in Artificial Intelligence, 2022–2026<br>
+Leo KoGuan Scholarship · National Scholarship · Second Prize, Chinese Mathematics Competitions
 
-- **Closed-Loop Active Learning for Sparse Neural Encoding** (2025–2026) — Developed GPU-accelerated reinforcement learning systems to overcome sampling bottlenecks when studying sparse neural responses in macaque visual cortex, under Prof. Shiming Tang.
-- **Brain-Inspired Representation Learning via ResNet-JEPA** (2025–2026) — Redesigned self-supervised visual pre-training architectures guided by the brain's predictive coding theory, under Prof. Shiming Tang.
-- **Equivariant Graph Neural Networks for 3D Atomistic Systems** (2024–2025) — Improved EGNN models (pro-EGNN) combining scalarization-based and high-degree steerable approaches to achieve SOTA performance on QM9, under Prof. Muhan Zhang.
-- **RNA Editing & tRNA Biology** (2024–2025) — Engineered tRNA modifications to improve the RESTART RNA editing system, under Prof. Chengqi Yi (Yilab).
-- **TCP Gene Family in Plants** (2022–2023) — Investigated regulatory roles of TCP genes in *Arabidopsis* and soybean leaf development, under Prof. Genji Qin.
-
-## Technical Skills
-
-**Programming:** Python (PyTorch, Scipy, Matplotlib, Scikit-learn), MATLAB, R
-**Languages:** Chinese (native), English (fluent)
+<p class="section-cta"><a href="{{ '/projects/' | relative_url }}">See all research projects →</a> · <a href="{{ '/notes/' | relative_url }}">Read my learning notes →</a></p>

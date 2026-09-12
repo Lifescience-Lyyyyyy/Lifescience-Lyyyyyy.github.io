@@ -3,8 +3,6 @@
   contents:
     - name: Full Name
       value: Yao Lu
-    - name: Date of Birth
-      value: 28th October 2003
     - name: Languages
       value: Chinese (native), English (fluent)
 
@@ -45,7 +43,7 @@
       description:
         - Improved the EGNN model based on SOTA model GotenNet, developing the pro-EGNN model.
         - Combined scalarization-based models and high-degree steerable models, maintaining the ability to encode high-degree geometric features while achieving computational efficiency.
-        - pro-EGNN outperforms the original EGNN on the QM9 dataset for 3D atomistic systems.
+        - Evaluated pro-EGNN against the original EGNN on the QM9 dataset for 3D atomistic systems.
     - title: RNA Editing and RNA Biology
       institution: Peking University — supervised by Prof. Chengqi Yi (Yilab)
       year: 2024 – 2025
