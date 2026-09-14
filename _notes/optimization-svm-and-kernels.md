@@ -210,6 +210,82 @@ $$
 
 The theorem converts an optimization problem over a potentially infinite-dimensional function space into one over $n$ coefficients. It does not make the method nonparametric in every possible sense, but it makes model complexity depend naturally on the data and kernel.
 
+## Derivation notebook
+
+### From geometric margin to the hard-margin primal
+
+The signed distance from $\mathbf x_i$ to $\mathbf w^\top\mathbf x+b=0$ is
+
+$$
+\frac{y_i(\mathbf w^\top\mathbf x_i+b)}{\lVert\mathbf w\rVert_2}.
+$$
+
+Multiplying $(\mathbf w,b)$ by a positive constant leaves the separating hyperplane unchanged. We may therefore choose the scale so that the closest points satisfy $y_i(\mathbf w^\top\mathbf x_i+b)=1$. The two supporting hyperplanes are then separated by $2/\lVert\mathbf w\rVert_2$, so maximizing margin is equivalent to
+
+$$
+\min_{\mathbf w,b}\frac12\lVert\mathbf w\rVert_2^2
+\quad\text{subject to}\quad
+y_i(\mathbf w^\top\mathbf x_i+b)\ge 1.
+$$
+
+### Eliminating the primal variables
+
+Introduce multipliers $\alpha_i\ge0$ and write
+
+$$
+\mathcal L=\frac12\lVert\mathbf w\rVert_2^2
+-\sum_i\alpha_i\left[y_i(\mathbf w^\top\mathbf x_i+b)-1\right].
+$$
+
+Stationarity gives
+
+$$
+\frac{\partial\mathcal L}{\partial\mathbf w}=0
+\Rightarrow \mathbf w=\sum_i\alpha_i y_i\mathbf x_i,
+\qquad
+\frac{\partial\mathcal L}{\partial b}=0
+\Rightarrow \sum_i\alpha_i y_i=0.
+$$
+
+Substituting both relations back into $\mathcal L$ produces
+
+$$
+\max_{\boldsymbol\alpha}
+\sum_i\alpha_i-rac12\sum_{i,j}\alpha_i\alpha_jy_iy_j
+\mathbf x_i^\top\mathbf x_j,
+$$
+
+subject to $\alpha_i\ge0$ and $\sum_i\alpha_i y_i=0$. Complementary slackness,
+$\alpha_i[y_i(\mathbf w^\top\mathbf x_i+b)-1]=0$, explains why only support vectors have nonzero coefficients.
+
+For the soft-margin problem, stationarity with respect to each slack variable gives $C-\alpha_i-\mu_i=0$. Since $\mu_i\ge0$, the dual constraint becomes $0\le\alpha_i\le C$.
+
+### Why the representer theorem is plausible
+
+Decompose any candidate $f\in\mathcal H$ as
+
+$$
+f=f_{\parallel}+f_{\perp},
+\qquad
+f_{\parallel}\in\operatorname{span}\{k(\mathbf x_i,\cdot)\},
+$$
+
+with $f_{\perp}$ orthogonal to that span. The reproducing property gives
+
+$$
+f_{\perp}(\mathbf x_i)=\langle f_{\perp},k(\mathbf x_i,\cdot)\rangle_{\mathcal H}=0.
+$$
+
+Hence the data-fit term depends only on $f_{\parallel}$, while
+
+$$
+\lVert f\rVert_{\mathcal H}^2
+=\lVert f_{\parallel}\rVert_{\mathcal H}^2
++\lVert f_{\perp}\rVert_{\mathcal H}^2.
+$$
+
+Any nonzero $f_{\perp}$ increases regularization without changing the predictions, so the minimizer must have $f_{\perp}=0$.
+
 ## Takeaways
 
 - KKT conditions combine feasibility, stationarity, dual feasibility, and complementary slackness.

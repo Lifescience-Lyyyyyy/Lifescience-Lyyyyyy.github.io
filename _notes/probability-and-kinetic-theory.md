@@ -149,6 +149,54 @@ $$
 
 Equipartition is a classical high-temperature result. It fails when quantum energy-level spacings are not small compared with $k_BT$.
 
+## Derivation notebook
+
+### Maxwell speed distribution from component velocities
+
+Thermal equilibrium makes the three Cartesian components independent Gaussians:
+
+$$
+p(v_x,v_y,v_z)=\left(\frac{m}{2\pi k_BT}\right)^{3/2}
+\exp\!\left[-\frac{m(v_x^2+v_y^2+v_z^2)}{2k_BT}\right].
+$$
+
+All directions with speed between $v$ and $v+dv$ occupy a spherical shell of volume $4\pi v^2dv$ in velocity space. Integrating over direction therefore gives
+
+$$
+f(v)=4\pi\left(\frac{m}{2\pi k_BT}\right)^{3/2}
+v^2e^{-mv^2/(2k_BT)},\qquad v\ge0.
+$$
+
+For the most probable speed, differentiate $\log f(v)$:
+
+$$
+\frac{d}{dv}\log f(v)=\frac2v-\frac{mv}{k_BT}=0
+\quad\Rightarrow\quad
+v_{\mathrm{mp}}=\sqrt{\frac{2k_BT}{m}}.
+$$
+
+Using Gaussian integrals gives $\langle v^2\rangle=3k_BT/m$ and hence
+$v_{\mathrm{rms}}=\sqrt{3k_BT/m}$.
+
+### Equipartition from a Gaussian integral
+
+For one quadratic degree of freedom with energy $\epsilon=ax^2/2$, let
+
+$$
+Z_x=\int_{-\infty}^{\infty}e^{-\beta ax^2/2}\,dx
+=\sqrt{\frac{2\pi}{\beta a}}.
+$$
+
+Then
+
+$$
+\langle\epsilon\rangle
+=-\frac{\partial}{\partial\beta}\log Z_x
+=\frac{1}{2\beta}=\frac12k_BT.
+$$
+
+Each independent quadratic coordinate or momentum therefore contributes $k_BT/2$ to the mean energy.
+
 ## Takeaways
 
 - Probability distributions translate microscopic uncertainty into measurable averages.

@@ -158,6 +158,79 @@ $$
 
 where $L=T\Delta S$ is the latent heat per particle or per mole, consistently with the chosen normalization.
 
+## Derivation notebook
+
+### Legendre transforms and natural variables
+
+Starting from
+
+$$
+dU=T\,dS-P\,dV+\mu\,dN,
+$$
+
+replace $S$ by its conjugate variable $T$ through $F=U-TS$:
+
+$$
+dF=dU-T\,dS-S\,dT=-S\,dT-P\,dV+\mu\,dN.
+$$
+
+Thus $F=F(T,V,N)$ and, for example,
+
+$$
+S=-\left(\frac{\partial F}{\partial T}\right)_{V,N},
+\qquad
+P=-\left(\frac{\partial F}{\partial V}\right)_{T,N}.
+$$
+
+Equality of mixed partial derivatives immediately gives
+
+$$
+\left(\frac{\partial S}{\partial V}\right)_{T,N}
+=\left(\frac{\partial P}{\partial T}\right)_{V,N},
+$$
+
+one of the Maxwell relations.
+
+### Stability and response functions
+
+At fixed $T$ and $V$, stable equilibrium minimizes $F$. Temperature stability requires
+
+$$
+C_V=T\left(\frac{\partial S}{\partial T}\right)_V
+=-T\left(\frac{\partial^2F}{\partial T^2}\right)_V\ge0.
+$$
+
+Mechanical stability requires a pressure increase under compression:
+
+$$
+\left(\frac{\partial P}{\partial V}\right)_T<0.
+$$
+
+Because
+
+$$
+\kappa_T=-\frac1V\left(\frac{\partial V}{\partial P}\right)_T,
+$$
+
+this is equivalent to $\kappa_T>0$. Negative heat capacity or compressibility signals instability in the corresponding controlled ensemble.
+
+### Clapeyron equation
+
+Along a coexistence curve, the molar Gibbs free energies of phases $a$ and $b$ are equal. Since $dg=-s\,dT+v\,dP$,
+
+$$
+-s_a\,dT+v_a\,dP=-s_b\,dT+v_b\,dP.
+$$
+
+Rearranging and using the latent heat per mole $L=T(s_b-s_a)$ gives
+
+$$
+\frac{dP}{dT}=\frac{s_b-s_a}{v_b-v_a}
+=\frac{L}{T(v_b-v_a)}.
+$$
+
+The slope of a phase boundary is therefore determined by its entropy and volume discontinuities.
+
 ## Takeaways
 
 - A thermodynamic potential is selected by the variables controlled by the environment.

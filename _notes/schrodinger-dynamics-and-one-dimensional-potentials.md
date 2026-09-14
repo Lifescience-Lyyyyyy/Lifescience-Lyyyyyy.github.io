@@ -159,6 +159,80 @@ $$
 
 Quantum tunnelling is therefore exponentially sensitive to barrier width, particle mass, and the energy deficit $V_0-E$.
 
+## Derivation notebook
+
+### Continuity equation from Schrödinger dynamics
+
+Start with the Schrödinger equation and its complex conjugate:
+
+$$
+i\hbar\partial_t\psi=-\frac{\hbar^2}{2m}\partial_x^2\psi+V\psi,
+\qquad
+-i\hbar\partial_t\psi^{\ast}=-\frac{\hbar^2}{2m}\partial_x^2\psi^{\ast}+V\psi^{\ast}.
+$$
+
+Multiply the first by $\psi^{\ast}$, the second by $\psi$, and subtract. The real-potential terms cancel, leaving
+
+$$
+\partial_t\lvert\psi\rvert^2
+=-\partial_x\!\left[
+\frac{\hbar}{2mi}(\psi^{\ast}\partial_x\psi-\psi\partial_x\psi^{\ast})
+\right].
+$$
+
+Thus $\partial_t\rho+\partial_xj=0$, with
+
+$$
+\rho=\lvert\psi\rvert^2,
+\qquad
+j=\frac{\hbar}{m}\operatorname{Im}(\psi^{\ast}\partial_x\psi).
+$$
+
+### Infinite-well quantization
+
+Inside a well $0<x<L$, the stationary equation is
+
+$$
+\psi''+k^2\psi=0,
+\qquad k^2=\frac{2mE}{\hbar^2},
+$$
+
+with solution $\psi=A\sin kx+B\cos kx$. The boundary condition $\psi(0)=0$ forces $B=0$, while $\psi(L)=0$ requires
+
+$$
+\sin(kL)=0\quad\Rightarrow\quad kL=n\pi.
+$$
+
+Hence
+
+$$
+E_n=\frac{\hbar^2k_n^2}{2m}
+=\frac{n^2\pi^2\hbar^2}{2mL^2},
+\qquad
+\psi_n(x)=\sqrt{\frac2L}\sin\frac{n\pi x}{L}.
+$$
+
+The discrete spectrum is not an added postulate; it follows from solving the differential equation with both boundary conditions.
+
+### Bound state of an attractive delta potential
+
+For $V(x)=-g\delta(x)$ with $g>0$ and $E=-\hbar^2\kappa^2/(2m)$, normalizability gives
+$\psi=Ae^{-\kappa\lvert x\rvert}$. Integrating the Schrödinger equation across an infinitesimal interval around zero gives the derivative jump
+
+$$
+\psi'(0^+)-\psi'(0^-)=-\frac{2mg}{\hbar^2}\psi(0).
+$$
+
+For the exponential solution the left side is $-2\kappa A$, so
+
+$$
+\kappa=\frac{mg}{\hbar^2},
+\qquad
+E=-\frac{mg^2}{2\hbar^2}.
+$$
+
+This shows directly why the one-dimensional attractive delta potential has exactly one bound state.
+
 ## Takeaways
 
 - Stationary states acquire only a phase under time evolution.

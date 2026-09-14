@@ -279,6 +279,84 @@ $$
 
 The forward process has latent states $x_1,\ldots,x_T$; saying that DDPM has "no hidden space" is therefore misleading. The important distinction from a VAE is that diffusion uses a long Markov chain in data space rather than a single compact latent code.
 
+## Derivation notebook
+
+### PCA as a constrained variance problem
+
+For centered data with covariance $S$, the variance after projection onto a unit vector $\mathbf v$ is $\mathbf v^\top S\mathbf v$. Introduce a multiplier for $\mathbf v^\top\mathbf v=1$:
+
+$$
+\mathcal L(\mathbf v,\lambda)=\mathbf v^\top S\mathbf v
+-\lambda(\mathbf v^\top\mathbf v-1).
+$$
+
+Stationarity gives $2S\mathbf v-2\lambda\mathbf v=0$, hence
+
+$$
+S\mathbf v=\lambda\mathbf v.
+$$
+
+At an eigenvector the projected variance equals $\lambda$, so the maximum is attained by the eigenvector with the largest eigenvalue. Subsequent components follow by adding orthogonality constraints.
+
+### EM as coordinate ascent on a lower bound
+
+For any distribution $q(z)$,
+
+$$
+\begin{aligned}
+\log p(x)
+&=\log\sum_z q(z)\frac{p(x,z)}{q(z)}\\
+&\ge\sum_zq(z)\log\frac{p(x,z)}{q(z)}
+=\mathcal L(q,\theta),
+\end{aligned}
+$$
+
+where Jensen's inequality supplies the bound. More precisely,
+
+$$
+\log p(x)=\mathcal L(q,\theta)
++D_{\mathrm{KL}}\!\left(q(z)\,\Vert\,p(z\mid x,\theta)\right).
+$$
+
+The E-step sets $q$ to the current posterior, making the KL term zero. The M-step increases $\mathcal L$ with respect to $\theta$. Alternating these steps cannot decrease the data likelihood, although it may converge to a local optimum.
+
+### The VAE evidence lower bound
+
+Insert the approximate posterior $q_\phi(z\mid x)$ into the same identity:
+
+$$
+\begin{aligned}
+\log p_\theta(x)
+&=\mathbb E_{q_\phi}\!\left[
+\log\frac{p_\theta(x,z)}{q_\phi(z\mid x)}\right]
++D_{\mathrm{KL}}\!\left(q_\phi(z\mid x)\,\Vert\,p_\theta(z\mid x)\right)\\
+&\ge
+\mathbb E_{q_\phi(z\mid x)}[\log p_\theta(x\mid z)]
+-D_{\mathrm{KL}}\!\left(q_\phi(z\mid x)\,\Vert\,p(z)\right).
+\end{aligned}
+$$
+
+The first term rewards reconstruction; the second regularizes the encoded distribution toward the prior.
+
+### Closed-form diffusion marginal
+
+Write one forward step as
+
+$$
+x_t=\sqrt{\alpha_t}x_{t-1}+\sqrt{1-\alpha_t}\epsilon_t,
+\qquad \epsilon_t\sim\mathcal N(0,I).
+$$
+
+Substituting the expression for $x_{t-1}$ repeatedly gives a signal coefficient
+$\sqrt{\alpha_t\alpha_{t-1}\cdots\alpha_1}=\sqrt{\bar\alpha_t}$. Independent Gaussian noise terms remain Gaussian, and their variances sum to $1-\bar\alpha_t$. Therefore
+
+$$
+q(x_t\mid x_0)=\mathcal N\!\left(
+\sqrt{\bar\alpha_t}x_0,(1-\bar\alpha_t)I\right),
+$$
+
+or equivalently $x_t=\sqrt{\bar\alpha_t}x_0+\sqrt{1-\bar\alpha_t}\epsilon$. This identity permits training at a randomly sampled time step without simulating every earlier step.
+
 ## Takeaways
 
 - PCA finds orthogonal directions of maximal variance and is equivalent to optimal linear low-rank reconstruction.

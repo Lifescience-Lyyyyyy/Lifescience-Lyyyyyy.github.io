@@ -203,6 +203,65 @@ $$
 
 The forward-backward algorithm computes state marginals, the Viterbi algorithm finds the most likely state sequence, and Baum-Welch is the EM algorithm specialized to HMM parameter learning.
 
+## Derivation notebook
+
+### Why bagging reduces variance
+
+Suppose $B$ base predictors each have variance $\sigma^2$ and pairwise correlation $\rho$. For their average $\bar f=B^{-1}\sum_b f_b$,
+
+$$
+\begin{aligned}
+\operatorname{Var}(\bar f)
+&=\frac{1}{B^2}\left[
+\sum_b\operatorname{Var}(f_b)+
+\sum_{b\ne b'}\operatorname{Cov}(f_b,f_{b'})\right]\\
+&=\frac{1}{B^2}\left[B\sigma^2+B(B-1)\rho\sigma^2\right]\\
+&=\rho\sigma^2+\frac{1-\rho}{B}\sigma^2.
+\end{aligned}
+$$
+
+Increasing $B$ removes only the uncorrelated part. Random forests improve on ordinary bagging by randomly restricting features, thereby reducing $\rho$.
+
+### AdaBoost from exponential loss
+
+At round $t$, add $\alpha h(x)$ to the current score $F_{t-1}(x)$. The exponential loss becomes
+
+$$
+L(\alpha)=\sum_i
+\exp[-y_iF_{t-1}(x_i)]\exp[-\alpha y_ih(x_i)].
+$$
+
+Let normalized weights satisfy $w_i\propto\exp[-y_iF_{t-1}(x_i)]$, and let the weighted error be
+$\varepsilon=\sum_{i:y_i\ne h(x_i)}w_i$. Correct examples contribute $e^{-\alpha}$ and incorrect examples contribute $e^{\alpha}$, so
+
+$$
+L(\alpha)\propto(1-\varepsilon)e^{-\alpha}+\varepsilon e^{\alpha}.
+$$
+
+Differentiating and setting the result to zero gives
+
+$$
+\alpha=\frac12\log\frac{1-\varepsilon}{\varepsilon},
+\qquad
+w_i^{\mathrm{new}}\propto w_i e^{-\alpha y_ih(x_i)}.
+$$
+
+Thus the familiar reweighting rule is a coordinate-descent step on a single global loss.
+
+### Forward recursion in a hidden Markov model
+
+Define $a_t(j)=P(o_{1:t},z_t=j)$. Marginalizing the previous state and using the Markov and emission assumptions,
+
+$$
+\begin{aligned}
+a_t(j)
+&=P(o_t\mid z_t=j)\sum_iP(o_{1:t-1},z_{t-1}=i,z_t=j)\\
+&=P(o_t\mid z_t=j)\sum_i a_{t-1}(i)P(z_t=j\mid z_{t-1}=i).
+\end{aligned}
+$$
+
+Finally, $P(o_{1:T})=\sum_j a_T(j)$. This replaces an exponential sum over all state sequences by dynamic programming.
+
 ## Takeaways
 
 - Tree splits aim to reduce label impurity or regression error.

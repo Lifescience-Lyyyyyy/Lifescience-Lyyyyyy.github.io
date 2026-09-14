@@ -186,6 +186,79 @@ A standard loop is:
 3. Evaluate the true objective at the selected point.
 4. Add the observation and repeat until the budget is exhausted.
 
+## Derivation notebook
+
+### From concentration to a finite-class guarantee
+
+For a fixed hypothesis with loss in $[0,1]$, Hoeffding's inequality gives
+
+$$
+P\!\left(\lvert R(h)-\widehat R_n(h)\rvert>\epsilon\right)
+\le 2e^{-2n\epsilon^2}.
+$$
+
+If $\mathcal H$ is finite, a union bound over all hypotheses yields
+
+$$
+P\!\left(\exists h\in\mathcal H:
+\lvert R(h)-\widehat R_n(h)\rvert>\epsilon\right)
+\le 2\lvert\mathcal H\rvert e^{-2n\epsilon^2}.
+$$
+
+Set the right-hand side to $\delta$ and solve for $\epsilon$:
+
+$$
+\epsilon=sqrt{\frac{\log(2\lvert\mathcal H\rvert/\delta)}{2n}}.
+$$
+
+On this high-probability event, empirical-risk minimization obeys
+
+$$
+R(\widehat h)
+\le \widehat R_n(\widehat h)+\epsilon
+\le \widehat R_n(h^{\star})+\epsilon
+\le R(h^{\star})+2\epsilon.
+$$
+
+This short chain is the reason uniform convergence, rather than concentration for a single fixed model, is needed for model selection.
+
+### Gaussian-process conditioning
+
+For training targets $\mathbf y$ and a latent test value $f_{\ast}$,
+
+$$
+\begin{bmatrix}\mathbf y\\f_{\ast}\end{bmatrix}
+\sim\mathcal N\!\left(
+\mathbf0,
+\begin{bmatrix}
+K+\sigma_n^2I & \mathbf k_{\ast}\\
+\mathbf k_{\ast}^\top & k_{\ast\ast}
+\end{bmatrix}\right).
+$$
+
+Seek a residual independent of $\mathbf y$ in the form
+$r=f_{\ast}-\mathbf a^\top\mathbf y$. Setting its cross-covariance to zero gives
+
+$$
+\operatorname{Cov}(r,\mathbf y)
+=\mathbf k_{\ast}^\top-\mathbf a^\top(K+\sigma_n^2I)=0,
+$$
+
+so $\mathbf a=(K+\sigma_n^2I)^{-1}\mathbf k_{\ast}$. Therefore
+
+$$
+\mathbb E[f_{\ast}\mid\mathbf y]
+=\mathbf k_{\ast}^\top(K+\sigma_n^2I)^{-1}\mathbf y,
+$$
+
+$$
+\operatorname{Var}(f_{\ast}\mid\mathbf y)
+=k_{\ast\ast}-\mathbf k_{\ast}^\top
+(K+\sigma_n^2I)^{-1}\mathbf k_{\ast}.
+$$
+
+The subtraction is the variance explained by observing correlated training values.
+
 ## Takeaways
 
 - A bound for one fixed model cannot automatically be applied to a model chosen from the same training data.

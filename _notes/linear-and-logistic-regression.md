@@ -206,6 +206,82 @@ Increasing model capacity often reduces bias but increases variance. More repres
 
 {% include figure.liquid path="assets/img/notes/machine-learning/bias-variance-sketch.png" class="img-fluid rounded z-depth-1" alt="Handwritten target sketch illustrating high bias and high variance" caption="A visual mnemonic for the bias-variance trade-off from the original lecture notes." %}
 
+## Derivation notebook
+
+### Normal equations from least squares
+
+For the matrix objective
+
+$$
+J(\mathbf w)=\frac12(\mathbf y-X\mathbf w)^\top(\mathbf y-X\mathbf w),
+$$
+
+expand before differentiating:
+
+$$
+J(\mathbf w)=\frac12\mathbf y^\top\mathbf y-\mathbf w^\top X^\top\mathbf y
++\frac12\mathbf w^\top X^\top X\mathbf w.
+$$
+
+Because $X^\top X$ is symmetric,
+
+$$
+\nabla_{\mathbf w}J=-X^\top\mathbf y+X^\top X\mathbf w.
+$$
+
+Setting the gradient to zero gives the normal equations
+
+$$
+X^\top X\widehat{\mathbf w}=X^\top\mathbf y.
+$$
+
+Thus $\widehat{\mathbf w}=(X^\top X)^{-1}X^\top\mathbf y$ only when the inverse exists; in computation, solving the linear system or using a pseudoinverse is preferable.
+
+### Ridge regression as MAP estimation
+
+Assume Gaussian observation noise and a zero-mean isotropic Gaussian prior:
+
+$$
+p(\mathbf y\mid\mathbf w)\propto
+\exp\!\left[-\frac{1}{2\sigma^2}\lVert\mathbf y-X\mathbf w\rVert_2^2\right],
+\qquad
+p(\mathbf w)\propto
+\exp\!\left[-\frac{1}{2\tau^2}\lVert\mathbf w\rVert_2^2\right].
+$$
+
+Bayes' rule shows that maximizing the posterior is equivalent to minimizing its negative logarithm:
+
+$$
+-\log p(\mathbf w\mid\mathbf y)
+=\frac{1}{2\sigma^2}\lVert\mathbf y-X\mathbf w\rVert_2^2
++\frac{1}{2\tau^2}\lVert\mathbf w\rVert_2^2+C.
+$$
+
+Multiplying by $2\sigma^2$ produces ridge regression with $\lambda=\sigma^2/\tau^2$. Differentiating then gives
+
+$$
+(X^\top X+\lambda I)\widehat{\mathbf w}=X^\top\mathbf y.
+$$
+
+### Logistic gradient and curvature
+
+Let $p_i=\sigma(\mathbf w^\top\mathbf x_i)$. Since $\sigma'(z)=\sigma(z)[1-\sigma(z)]$, differentiating one binary cross-entropy term yields
+
+$$
+\frac{\partial}{\partial z_i}
+\left[-y_i\log p_i-(1-y_i)\log(1-p_i)\right]=p_i-y_i.
+$$
+
+The chain rule therefore gives
+
+$$
+\nabla_{\mathbf w}J=X^\top(\mathbf p-\mathbf y),
+\qquad
+\nabla_{\mathbf w}^2J=X^\top R X,
+$$
+
+where $R=\operatorname{diag}(p_i(1-p_i))$. Because $R$ is positive semidefinite, the loss is convex; this is why Newton or iteratively reweighted least-squares updates have a unique optimum when the data are not perfectly separable.
+
 ## Takeaways
 
 - Least squares has a closed-form characterization, but stable numerical solvers are preferable to explicit matrix inversion.

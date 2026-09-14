@@ -170,6 +170,90 @@ $$
 
 and hence a heat capacity proportional to $T^3$. The same low-temperature power law appears for three-dimensional acoustic phonons in the Debye model.
 
+## Derivation notebook
+
+### Canonical weights from a large reservoir
+
+Let the system have energy $E_i$ and the reservoir have energy $E_{\mathrm{tot}}-E_i$. The probability of state $i$ is proportional to the reservoir multiplicity:
+
+$$
+p_i\propto\Omega_R(E_{\mathrm{tot}}-E_i)
+=\exp\!\left[\frac{S_R(E_{\mathrm{tot}}-E_i)}{k_B}\right].
+$$
+
+Because the reservoir is large, expand its entropy to first order:
+
+$$
+S_R(E_{\mathrm{tot}}-E_i)
+\simeq S_R(E_{\mathrm{tot}})-E_i
+\left(\frac{\partial S_R}{\partial E_R}\right)
+=S_R(E_{\mathrm{tot}})-\frac{E_i}{T}.
+$$
+
+The state-independent factor cancels in normalization, leaving
+
+$$
+p_i=\frac{e^{-\beta E_i}}{Z},
+\qquad Z=\sum_i e^{-\beta E_i}.
+$$
+
+Differentiation gives $U=-\partial_\beta\log Z$ and
+
+$$
+\operatorname{Var}(E)=\frac{\partial^2\log Z}{\partial\beta^2}
+=k_BT^2C_V.
+$$
+
+### Bose and Fermi occupations from one level
+
+In the grand ensemble, one single-particle level of energy $\epsilon$ has weight
+$e^{-\beta(\epsilon-\mu)n}$. For fermions, $n=0,1$, so
+
+$$
+\Xi_{\epsilon}^{F}=1+e^{-\beta(\epsilon-\mu)},
+\qquad
+\langle n\rangle_F
+=\frac{1}{e^{\beta(\epsilon-\mu)}+1}.
+$$
+
+For bosons, $n=0,1,2,\ldots$ and the geometric series gives
+
+$$
+\Xi_{\epsilon}^{B}=\frac{1}{1-e^{-\beta(\epsilon-\mu)}},
+\qquad
+\langle n\rangle_B
+=\frac{1}{e^{\beta(\epsilon-\mu)}-1}.
+$$
+
+The only algebraic difference is the allowed occupation count, but it produces the characteristic plus or minus sign.
+
+### Critical temperature for Bose condensation
+
+For a three-dimensional free gas, the excited-state population is
+
+$$
+N_{\mathrm{ex}}=\int_0^\infty
+\frac{g(\epsilon)\,d\epsilon}{e^{\beta(\epsilon-\mu)}-1},
+\qquad g(\epsilon)\propto V\epsilon^{1/2}.
+$$
+
+At the transition, $\mu\to0$ and the excited states reach their maximum capacity:
+
+$$
+N=\frac{V}{\lambda_T^3}\zeta\!\left(\frac32\right),
+\qquad
+\lambda_T=\frac{h}{\sqrt{2\pi mk_BT}}.
+$$
+
+Solving for temperature gives
+
+$$
+T_c=\frac{2\pi\hbar^2}{mk_B}
+\left[\frac{n}{\zeta(3/2)}\right]^{2/3}.
+$$
+
+Below $T_c$, particles beyond the excited-state capacity accumulate macroscopically in the ground state.
+
 ## Takeaways
 
 - Each ensemble corresponds to a different set of externally controlled variables.

@@ -141,6 +141,67 @@ $$
 
 Superposition occurs at the amplitude level. Consequently, probabilities contain interference cross terms.
 
+## Derivation notebook
+
+### Planck spectrum from modes and quanta
+
+Counting standing electromagnetic modes in a cavity gives the mode density per unit volume
+
+$$
+g(\nu)=\frac{8\pi\nu^2}{c^3}.
+$$
+
+A mode with photon energy $h\nu$ has Bose occupation
+
+$$
+\bar n=\frac{1}{e^{h\nu/(k_BT)}-1},
+$$
+
+so its mean energy is $h\nu\bar n$. Multiplying energy per mode by mode density yields
+
+$$
+u(\nu,T)=\frac{8\pi h\nu^3}{c^3}
+\frac{1}{e^{h\nu/(k_BT)}-1}.
+$$
+
+For $h\nu\ll k_BT$, the denominator is approximately $h\nu/(k_BT)$ and the Rayleigh-Jeans law is recovered. At high frequency the exponential suppresses the spectrum, removing the ultraviolet catastrophe.
+
+### Bohr radius and hydrogen energies
+
+For a circular orbit, Coulomb attraction supplies the centripetal force while angular momentum is quantized:
+
+$$
+\frac{mv^2}{r}=\frac{e^2}{4\pi\varepsilon_0r^2},
+\qquad mvr=n\hbar.
+$$
+
+Eliminating $v$ gives
+
+$$
+r_n=\frac{4\pi\varepsilon_0\hbar^2}{me^2}n^2=a_0n^2.
+$$
+
+The total energy is kinetic plus potential energy. From the force equation,
+$mv^2=e^2/(4\pi\varepsilon_0r)$, hence
+
+$$
+E_n=\frac12mv^2-\frac{e^2}{4\pi\varepsilon_0r_n}
+=-\frac{e^2}{8\pi\varepsilon_0r_n}
+=-\frac{me^4}{2(4\pi\varepsilon_0)^2\hbar^2}\frac1{n^2}.
+$$
+
+Transitions then emit or absorb photons satisfying $h\nu=\lvert E_f-E_i\rvert$.
+
+### Group velocity of matter waves
+
+For a narrow packet, $v_g=d\omega/dk$. With $E=\hbar\omega$ and $p=\hbar k$,
+
+$$
+v_g=\frac{dE}{dp}.
+$$
+
+For a nonrelativistic particle $E=p^2/(2m)$, so $v_g=p/m$, exactly the classical particle velocity. The phase velocity $\omega/k=E/p=v/2$ is not the signal velocity.
+
 ## Takeaways
 
 - Planck quantization cures the ultraviolet catastrophe.

@@ -161,6 +161,67 @@ $$
 
 The evolution operator is unitary, so inner products and total probability are preserved.
 
+## Derivation notebook
+
+### Why Hermitian eigenvalues are real
+
+Let $A\lvert a\rangle=a\lvert a\rangle$ and $A=A^\dagger$. Then
+
+$$
+\langle a\rvert A\lvert a\rangle=a\langle a\mid a\rangle.
+$$
+
+Taking the adjoint of the scalar on the left and using Hermiticity also gives
+
+$$
+\langle a\rvert A\lvert a\rangle=a^{\ast}\langle a\mid a\rangle.
+$$
+
+Since a nonzero eigenvector has positive norm, $a=a^{\ast}$ and the eigenvalue is real.
+
+### Position-momentum commutator
+
+Apply the commutator to an arbitrary differentiable wavefunction:
+
+$$
+\begin{aligned}
+[x,p]\psi(x)
+&=x(-i\hbar\partial_x\psi)
+-(-i\hbar\partial_x)(x\psi)\\
+&=-i\hbar x\psi'+i\hbar(\psi+x\psi')\\
+&=i\hbar\psi.
+\end{aligned}
+$$
+
+Therefore $[x,p]=i\hbar I$.
+
+### Robertson uncertainty relation
+
+Define centered operators $\Delta A=A-\langle A\rangle$ and $\Delta B=B-\langle B\rangle$, and vectors
+$\lvert u\rangle=\Delta A\lvert\psi\rangle$ and
+$\lvert v\rangle=\Delta B\lvert\psi\rangle$. Cauchy-Schwarz gives
+
+$$
+(\Delta A)^2(\Delta B)^2
+=\langle u\mid u\rangle\langle v\mid v\rangle
+\ge\lvert\langle u\mid v\rangle\rvert^2.
+$$
+
+The imaginary part of $\langle u\mid v\rangle$ is
+
+$$
+\operatorname{Im}\langle u\mid v\rangle
+=\frac{1}{2i}\langle[A,B]\rangle.
+$$
+
+Keeping only this part gives
+
+$$
+\Delta A\,\Delta B\ge\frac12\lvert\langle[A,B]\rangle\rvert.
+$$
+
+With $[x,p]=i\hbar$, this becomes $\Delta x\,\Delta p\ge\hbar/2$.
+
 ## Takeaways
 
 - Physical states are rays in a complex Hilbert space.

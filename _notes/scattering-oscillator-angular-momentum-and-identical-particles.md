@@ -173,6 +173,91 @@ For fermions, using the same one-particle state twice makes the antisymmetric st
 
 For $N$ fermions, antisymmetrization is compactly represented by a Slater determinant. Exchange symmetry also changes spatial correlations even when the particles do not interact dynamically.
 
+## Derivation notebook
+
+### Reflection and transmission from probability current
+
+For a plane wave $Ae^{ikx}$, the current is
+
+$$
+j=\frac{\hbar k}{m}\lvert A\rvert^2.
+$$
+
+If the asymptotic wavefunctions are
+
+$$
+\psi_L=Ae^{ik_Lx}+Be^{-ik_Lx},
+\qquad
+\psi_R=Ce^{ik_Rx},
+$$
+
+then incident, reflected, and transmitted current magnitudes are proportional to
+$k_L\lvert A\rvert^2$, $k_L\lvert B\rvert^2$, and $k_R\lvert C\rvert^2$. Therefore
+
+$$
+R=\frac{\lvert B\rvert^2}{\lvert A\rvert^2},
+\qquad
+T=\frac{k_R}{k_L}\frac{\lvert C\rvert^2}{\lvert A\rvert^2}.
+$$
+
+The factor $k_R/k_L$ is essential: transmission is a ratio of currents, not merely amplitudes.
+
+### Harmonic-oscillator spectrum from ladder operators
+
+Define
+
+$$
+a=\sqrt{\frac{m\omega}{2\hbar}}x
++\frac{i}{\sqrt{2m\hbar\omega}}p,
+\qquad [a,a^\dagger]=1.
+$$
+
+Direct substitution into $H=p^2/(2m)+m\omega^2x^2/2$ gives
+
+$$
+H=\hbar\omega\left(a^\dagger a+\frac12\right)
+=\hbar\omega\left(N+\frac12\right).
+$$
+
+Since $N=a^\dagger a$ is nonnegative, repeated lowering must terminate at a state satisfying $a\lvert0\rangle=0$. The commutator $[N,a^\dagger]=a^\dagger$ then generates eigenstates with integer eigenvalues:
+
+$$
+N\lvert n\rangle=n\lvert n\rangle,
+\qquad
+E_n=\hbar\omega\left(n+\frac12\right).
+$$
+
+### Radial reduction for central potentials
+
+Writing $\psi(r,\theta,\phi)=R(r)Y_{\ell m}(\theta,\phi)$ and using
+$L^2Y_{\ell m}=\hbar^2\ell(\ell+1)Y_{\ell m}$ gives
+
+$$
+-\frac{\hbar^2}{2m}\left[
+\frac1{r^2}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right)
+-\frac{\ell(\ell+1)}{r^2}R\right]+V(r)R=ER.
+$$
+
+Set $u(r)=rR(r)$. Then the first-derivative structure collapses and the equation becomes one-dimensional:
+
+$$
+-\frac{\hbar^2}{2m}\frac{d^2u}{dr^2}
++\left[V(r)+\frac{\hbar^2\ell(\ell+1)}{2mr^2}\right]u=Eu.
+$$
+
+The second term in brackets is the centrifugal barrier, which explains why states with larger $\ell$ are suppressed near the origin.
+
+### Antisymmetry and the Pauli exclusion principle
+
+For two identical fermions in one-particle states $a$ and $b$, the normalized state is
+
+$$
+\Psi(1,2)=\frac1{\sqrt2}
+\left[\phi_a(1)\phi_b(2)-\phi_b(1)\phi_a(2)\right].
+$$
+
+If $a=b$, the two terms cancel exactly, so $\Psi=0$. Thus two fermions cannot occupy the same complete one-particle state. For electrons, the total state includes spin; a symmetric spin triplet requires an antisymmetric spatial state, while the antisymmetric singlet permits a symmetric spatial state.
+
 ## Takeaways
 
 - Scattering probabilities are flux ratios, not always simple amplitude squares.

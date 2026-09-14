@@ -144,6 +144,63 @@ $$
 
 Entropy is a state function even when the actual path is irreversible; its change may be computed along any convenient reversible path connecting the same endpoints.
 
+## Derivation notebook
+
+### Reversible adiabatic relations
+
+For an ideal gas in a reversible adiabatic process, $\delta Q=0$ and
+
+$$
+nC_VdT=-P\,dV=-\frac{nRT}{V}\,dV.
+$$
+
+Dividing by $nC_VT$ and using $R/C_V=\gamma-1$ gives
+
+$$
+\frac{dT}{T}=-(\gamma-1)\frac{dV}{V}.
+$$
+
+Integration yields $TV^{\gamma-1}=\text{constant}$. Combining this with $PV=nRT$ gives the equivalent form
+
+$$
+PV^\gamma=\text{constant}.
+$$
+
+### Carnot efficiency from entropy balance
+
+During the two reversible isotherms, the working substance absorbs $Q_H$ at $T_H$ and releases $Q_C$ at $T_C$. The adiabatic legs carry no entropy, so after a complete cycle
+
+$$
+\Delta S_{\mathrm{cycle}}=\frac{Q_H}{T_H}-\frac{Q_C}{T_C}=0.
+$$
+
+Thus $Q_C/Q_H=T_C/T_H$. Since $W=Q_H-Q_C$,
+
+$$
+\eta=\frac{W}{Q_H}=1-\frac{Q_C}{Q_H}
+=1-\frac{T_C}{T_H}.
+$$
+
+The derivation also shows why no reversible engine between the same reservoirs can have a different efficiency.
+
+### Ideal-gas entropy change
+
+For a reversible path, $dS=\delta Q_{\mathrm{rev}}/T$. Combining the first law with $dU=nC_VdT$ and $P=nRT/V$ gives
+
+$$
+dS=\frac{nC_VdT+P\,dV}{T}
+=nC_V\frac{dT}{T}+nR\frac{dV}{V}.
+$$
+
+Integrating between two equilibrium states,
+
+$$
+\Delta S=nC_V\log\frac{T_2}{T_1}
++nR\log\frac{V_2}{V_1}.
+$$
+
+Entropy is a state function, so this expression remains valid even if the actual process is irreversible.
+
 ## Takeaways
 
 - Heat and work depend on the path, while internal energy and entropy are state functions.
