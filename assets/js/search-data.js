@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-notes",
           title: "Notes",
-          description: "Structured learning notes on neuroscience, machine learning, mathematics, and biology.",
+          description: "Structured learning notes on neuroscience, machine learning, physics, mathematics, and biology.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/notes/";
@@ -67,6 +67,46 @@ ninja.data = [{
           description: "PCA, k-means, Gaussian mixtures, EM, variational autoencoders, and denoising diffusion models.",
           section: "Notes",handler: () => {
               window.location.href = "/notes/machine-learning/unsupervised-and-generative-models/";
+            },},{id: "notes-probability-and-kinetic-theory",
+          title: 'Probability and Kinetic Theory',
+          description: "Probability distributions, information entropy, phase-space averages, and the Maxwell-Boltzmann velocity distribution.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/introduction-to-modern-physics/probability-and-kinetic-theory/";
+            },},{id: "notes-thermodynamics-and-heat-engines",
+          title: 'Thermodynamics and Heat Engines',
+          description: "The laws of thermodynamics, reversible processes, ideal-gas paths, entropy, Carnot cycles, and heat-engine limits.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/introduction-to-modern-physics/thermodynamics-and-heat-engines/";
+            },},{id: "notes-thermodynamic-potentials-stability-and-phase-equilibrium",
+          title: 'Thermodynamic Potentials, Stability, and Phase Equilibrium',
+          description: "Legendre transforms, Maxwell relations, response functions, stability criteria, chemical potential, and phase coexistence.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/introduction-to-modern-physics/thermodynamic-potentials-and-stability/";
+            },},{id: "notes-statistical-ensembles-and-quantum-statistics",
+          title: 'Statistical Ensembles and Quantum Statistics',
+          description: "Microcanonical, canonical, and grand-canonical ensembles; partition functions; ideal gases; Bose-Einstein and Fermi-Dirac statistics.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/introduction-to-modern-physics/statistical-ensembles-and-quantum-statistics/";
+            },},{id: "notes-origins-of-quantum-theory-and-matter-waves",
+          title: 'Origins of Quantum Theory and Matter Waves',
+          description: "Blackbody radiation, photons, the photoelectric effect, atomic spectra, the Bohr model, and de Broglie matter waves.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/introduction-to-modern-physics/origins-of-quantum-theory/";
+            },},{id: "notes-hilbert-space-operators-and-measurement",
+          title: 'Hilbert Space, Operators, and Measurement',
+          description: "Quantum states, inner products, Hermitian operators, eigenbasis expansions, measurement, commutators, and uncertainty.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/introduction-to-modern-physics/hilbert-space-operators-and-measurement/";
+            },},{id: "notes-schrödinger-dynamics-and-one-dimensional-potentials",
+          title: 'Schrödinger Dynamics and One-Dimensional Potentials',
+          description: "Time evolution, stationary states, probability current, wave packets, infinite wells, delta potentials, barriers, and tunnelling.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/introduction-to-modern-physics/schrodinger-dynamics-and-one-dimensional-potentials/";
+            },},{id: "notes-scattering-oscillators-angular-momentum-and-identical-particles",
+          title: 'Scattering, Oscillators, Angular Momentum, and Identical Particles',
+          description: "Reflection and transmission, the harmonic oscillator, three-dimensional central potentials, hydrogen, and exchange symmetry.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/introduction-to-modern-physics/scattering-oscillator-angular-momentum-and-identical-particles/";
             },},{id: "projects-closed-loop-active-learning-for-sparse-neural-encoding",
           title: 'Closed-Loop Active Learning for Sparse Neural Encoding',
           description: "Reinforcement learning for efficient discovery of rare high-response features in macaque AIT cortex.",
