@@ -2,11 +2,16 @@
 layout: post
 title: "Learning Theory and Gaussian Processes"
 date: 2024-11-06
+permalink: /notes/machine-learning/learning-theory-and-gaussian-processes/
 description: "PAC-style generalization bounds, growth functions, VC dimension, Gaussian process regression, and Bayesian optimization."
 tags: [machine-learning, learning-theory, gaussian-processes]
 categories: [course-notes]
+course: Machine Learning
+chapter: 3
 related_posts: false
 ---
+
+[Machine Learning]({{ '/notes/machine-learning/' | relative_url }}) / Chapter 3
 
 > These notes reorganize Lectures 7-8. Probability statements and Gaussian process covariance formulas have been corrected and made explicit.
 

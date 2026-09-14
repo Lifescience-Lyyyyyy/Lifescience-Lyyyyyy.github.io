@@ -2,11 +2,16 @@
 layout: post
 title: "Constrained Optimization, SVMs, and Kernels"
 date: 2024-10-16
+permalink: /notes/machine-learning/optimization-svm-and-kernels/
 description: "KKT conditions, maximum-margin classification, duality, soft-margin SVMs, kernels, RKHSs, and the representer theorem."
 tags: [machine-learning, optimization, kernels]
 categories: [course-notes]
+course: Machine Learning
+chapter: 2
 related_posts: false
 ---
+
+[Machine Learning]({{ '/notes/machine-learning/' | relative_url }}) / Chapter 2
 
 > These notes reorganize Lectures 3-6. Signs, scaling conventions, and several statements about duality have been corrected.
 

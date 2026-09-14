@@ -14,23 +14,23 @@ nav_order: 3
     <p class="post-description">Structured learning notes on neuroscience, machine learning, mathematics, and biology — written to make ideas easier to revisit and connect.</p>
   </header>
 
-{% assign sorted_notes = site.notes | sort: 'date' | reverse %}
-{% if sorted_notes.size > 0 %}
+{% assign machine_learning_notes = site.notes | where: 'course', 'Machine Learning' %}
+{% if machine_learning_notes.size > 0 %}
+
 <div class="content-entry-list">
-{% for note in sorted_notes %}
 <article class="content-entry">
-<time datetime="{{ note.date | date_to_xmlschema }}">{{ note.date | date: '%B %d, %Y' }}</time>
+<span>COURSE · {{ machine_learning_notes.size }} CHAPTERS</span>
 <div>
-<h2><a href="{{ note.url | relative_url }}">{{ note.title }}</a></h2>
-{% if note.description %}<p>{{ note.description }}</p>{% endif %}
-{% if note.tags.size > 0 %}
-<ul class="entry-tags" aria-label="Note topics">
-{% for tag in note.tags %}<li>{{ tag }}</li>{% endfor %}
+<h2><a href="{{ '/notes/machine-learning/' | relative_url }}">Machine Learning</a></h2>
+<p>Mathematical foundations and core methods, from linear models and kernels to Gaussian processes, ensembles, and generative models.</p>
+<ul class="entry-tags" aria-label="Course topics">
+<li>Fall 2024</li>
+<li>Supervised learning</li>
+<li>Unsupervised learning</li>
+<li>Generative models</li>
 </ul>
-{% endif %}
 </div>
 </article>
-{% endfor %}
 </div>
 {% else %}
 <div class="notes-empty">

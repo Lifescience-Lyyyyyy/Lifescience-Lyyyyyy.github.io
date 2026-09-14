@@ -2,11 +2,16 @@
 layout: post
 title: "Decision Trees, Ensembles, and Graphical Models"
 date: 2024-11-20
+permalink: /notes/machine-learning/trees-ensembles-and-graphical-models/
 description: "Tree splitting criteria, bagging, random forests, boosting, Bayesian networks, naive Bayes, and hidden Markov models."
 tags: [machine-learning, decision-trees, graphical-models]
 categories: [course-notes]
+course: Machine Learning
+chapter: 4
 related_posts: false
 ---
+
+[Machine Learning]({{ '/notes/machine-learning/' | relative_url }}) / Chapter 4
 
 > These notes reorganize Lectures 9-10. The ensemble formulas and conditional-independence statements have been normalized and corrected.
 

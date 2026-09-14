@@ -2,11 +2,16 @@
 layout: post
 title: "Linear and Logistic Regression"
 date: 2024-09-18
+permalink: /notes/machine-learning/linear-and-logistic-regression/
 description: "Least squares, regularization, probabilistic classification, softmax regression, and the bias-variance trade-off."
 tags: [machine-learning, regression, classification]
 categories: [course-notes]
+course: Machine Learning
+chapter: 1
 related_posts: false
 ---
+
+[Machine Learning]({{ '/notes/machine-learning/' | relative_url }}) / Chapter 1
 
 > These notes reorganize Lectures 1-3 of my machine learning course. Notation and several derivations have been standardized, and conceptual errors in the handwritten version have been corrected.
 

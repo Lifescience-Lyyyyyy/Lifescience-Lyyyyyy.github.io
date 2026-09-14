@@ -2,11 +2,16 @@
 layout: post
 title: "Unsupervised Learning and Generative Models"
 date: 2024-12-25
+permalink: /notes/machine-learning/unsupervised-and-generative-models/
 description: "PCA, k-means, Gaussian mixtures, EM, variational autoencoders, and denoising diffusion models."
 tags: [machine-learning, unsupervised-learning, generative-models]
 categories: [course-notes]
+course: Machine Learning
+chapter: 5
 related_posts: false
 ---
+
+[Machine Learning]({{ '/notes/machine-learning/' | relative_url }}) / Chapter 5
 
 > These notes reorganize Lectures 11-14. The PCA scaling, EM objective, VAE ELBO, and DDPM notation have been corrected and completed.
 
