@@ -42,6 +42,31 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "notes-linear-and-logistic-regression",
+          title: 'Linear and Logistic Regression',
+          description: "Least squares, regularization, probabilistic classification, softmax regression, and the bias-variance trade-off.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/linear-and-logistic-regression/";
+            },},{id: "notes-constrained-optimization-svms-and-kernels",
+          title: 'Constrained Optimization, SVMs, and Kernels',
+          description: "KKT conditions, maximum-margin classification, duality, soft-margin SVMs, kernels, RKHSs, and the representer theorem.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/optimization-svm-and-kernels/";
+            },},{id: "notes-learning-theory-and-gaussian-processes",
+          title: 'Learning Theory and Gaussian Processes',
+          description: "PAC-style generalization bounds, growth functions, VC dimension, Gaussian process regression, and Bayesian optimization.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/learning-theory-and-gaussian-processes/";
+            },},{id: "notes-decision-trees-ensembles-and-graphical-models",
+          title: 'Decision Trees, Ensembles, and Graphical Models',
+          description: "Tree splitting criteria, bagging, random forests, boosting, Bayesian networks, naive Bayes, and hidden Markov models.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/trees-ensembles-and-graphical-models/";
+            },},{id: "notes-unsupervised-learning-and-generative-models",
+          title: 'Unsupervised Learning and Generative Models',
+          description: "PCA, k-means, Gaussian mixtures, EM, variational autoencoders, and denoising diffusion models.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/unsupervised-and-generative-models/";
             },},{id: "projects-closed-loop-active-learning-for-sparse-neural-encoding",
           title: 'Closed-Loop Active Learning for Sparse Neural Encoding',
           description: "Reinforcement learning for efficient discovery of rare high-response features in macaque AIT cortex.",
