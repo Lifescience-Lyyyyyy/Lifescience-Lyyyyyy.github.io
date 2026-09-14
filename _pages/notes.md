@@ -2,7 +2,7 @@
 layout: default
 permalink: /notes/
 title: Notes
-description: Structured learning notes on neuroscience, machine learning, mathematics, and biology.
+description: Structured learning notes on neuroscience, machine learning, physics, mathematics, and biology.
 nav: true
 nav_order: 3
 ---
@@ -11,13 +11,15 @@ nav_order: 3
   <header class="post-header page-hero-header">
     <p class="eyebrow">LEARNING · CONNECTING · REVISING</p>
     <h1 class="post-title">Notes</h1>
-    <p class="post-description">Structured learning notes on neuroscience, machine learning, mathematics, and biology — written to make ideas easier to revisit and connect.</p>
+    <p class="post-description">Structured learning notes on neuroscience, machine learning, physics, mathematics, and biology — written to make ideas easier to revisit and connect.</p>
   </header>
 
 {% assign machine_learning_notes = site.notes | where: 'course', 'Machine Learning' %}
-{% if machine_learning_notes.size > 0 %}
+{% assign modern_physics_notes = site.notes | where: 'course', 'Introduction to Modern Physics' %}
+{% if machine_learning_notes.size > 0 or modern_physics_notes.size > 0 %}
 
 <div class="content-entry-list">
+{% if machine_learning_notes.size > 0 %}
 <article class="content-entry">
 <span>COURSE · {{ machine_learning_notes.size }} CHAPTERS</span>
 <div>
@@ -31,12 +33,28 @@ nav_order: 3
 </ul>
 </div>
 </article>
+{% endif %}
+{% if modern_physics_notes.size > 0 %}
+<article class="content-entry">
+<span>COURSE · {{ modern_physics_notes.size }} CHAPTERS</span>
+<div>
+<h2><a href="{{ '/notes/introduction-to-modern-physics/' | relative_url }}">Introduction to Modern Physics</a></h2>
+<p>Thermal and statistical physics followed by the foundations and central models of quantum mechanics.</p>
+<ul class="entry-tags" aria-label="Course topics">
+<li>Spring 2025</li>
+<li>Thermodynamics</li>
+<li>Statistical mechanics</li>
+<li>Quantum mechanics</li>
+</ul>
+</div>
+</article>
+{% endif %}
 </div>
 {% else %}
 <div class="notes-empty">
 <span class="notes-empty-icon"><i class="fa-regular fa-pen-to-square"></i></span>
 <h2>Notes are on the way.</h2>
-<p>I am preparing learning notes on neuroscience, machine learning, mathematics, and biology. This page will grow alongside what I study.</p>
+<p>I am preparing learning notes on neuroscience, machine learning, physics, mathematics, and biology. This page will grow alongside what I study.</p>
 </div>
 {% endif %}
 
