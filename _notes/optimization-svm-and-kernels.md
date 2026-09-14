@@ -23,13 +23,13 @@ $$
 \min_x f(x)\quad\text{subject to}\quad h(x)=0.
 $$
 
-At a regular local optimum $x^*$, feasible first-order directions are tangent to the constraint surface, while $\nabla h(x^*)$ is normal to it. Therefore
+At a regular local optimum $x^{\ast}$, feasible first-order directions are tangent to the constraint surface, while $\nabla h(x^{\ast})$ is normal to it. Therefore
 
 $$
-\nabla f(x^*)+\lambda^*\nabla h(x^*)=0
+\nabla f(x^{\ast})+\lambda^{\ast}\nabla h(x^{\ast})=0
 $$
 
-for some multiplier $\lambda^*$. Define the Lagrangian
+for some multiplier $\lambda^{\ast}$. Define the Lagrangian
 
 $$
 \mathcal L(x,\lambda)=f(x)+\lambda h(x).
@@ -56,12 +56,12 @@ $$
 
 Under an appropriate constraint qualification, a local optimum satisfies:
 
-1. **Primal feasibility:** $h_j(x^*)=0$ and $g_i(x^*)\le 0$.
-2. **Dual feasibility:** $\mu_i^*\ge 0$.
-3. **Stationarity:** $\nabla_x\mathcal L(x^*,\lambda^*,\mu^*)=0$.
-4. **Complementary slackness:** $\mu_i^*g_i(x^*)=0$.
+1. **Primal feasibility:** $h_j(x^{\ast})=0$ and $g_i(x^{\ast})\le 0$.
+2. **Dual feasibility:** $\mu_i^{\ast}\ge 0$.
+3. **Stationarity:** $\nabla_x\mathcal L(x^{\ast},\lambda^{\ast},\mu^{\ast})=0$.
+4. **Complementary slackness:** $\mu_i^{\ast}g_i(x^{\ast})=0$.
 
-An inactive inequality has $g_i(x^*)<0$ and therefore $\mu_i^*=0$.
+An inactive inequality has $g_i(x^{\ast})<0$ and therefore $\mu_i^{\ast}=0$.
 
 ## Linear support vector machines
 
@@ -87,6 +87,8 @@ $$
 
 Minimizing $\lVert w\rVert_2$ maximizes the distance between the two supporting hyperplanes, which is $2/\lVert w\rVert_2$.
 
+{% include figure.liquid path="assets/img/notes/machine-learning/svm-margin-sketch.png" class="img-fluid rounded z-depth-1" alt="Handwritten support vector machine margin sketches" caption="The maximum-margin intuition: among separating hyperplanes, SVM selects the one with the largest geometric margin." %}
+
 ## The SVM dual
 
 Introduce multipliers $\alpha_i\ge 0$:
@@ -109,7 +111,7 @@ Substitution yields
 
 $$
 \max_{\alpha}
-\sum_i\alpha_i-rac12\sum_{i,j}\alpha_i\alpha_jy_i y_j x_i^\top x_j
+\sum_i\alpha_i-\frac12\sum_{i,j}\alpha_i\alpha_jy_i y_j x_i^\top x_j
 $$
 
 subject to $\alpha_i\ge 0$ and $\sum_i\alpha_i y_i=0$.
@@ -126,7 +128,7 @@ $$
 b=y_i-w^\top x_i.
 $$
 
-Weak duality always gives $d^*\le p^*$. Strong duality requires additional conditions; for convex problems, Slater's condition is a common sufficient condition. It is not true that strong duality holds for every constrained problem.
+Weak duality always gives $d^{\ast}\le p^{\ast}$. Strong duality requires additional conditions; for convex problems, Slater's condition is a common sufficient condition. It is not true that strong duality holds for every constrained problem.
 
 ## Soft-margin SVM
 
@@ -203,7 +205,7 @@ $$
 where $\Omega$ is strictly increasing. The representer theorem states that a minimizer can be written as
 
 $$
-f^*(\cdot)=\sum_{i=1}^n\alpha_i k(x_i,\cdot).
+f^{\ast}(\cdot)=\sum_{i=1}^n\alpha_i k(x_i,\cdot).
 $$
 
 The theorem converts an optimization problem over a potentially infinite-dimensional function space into one over $n$ coefficients. It does not make the method nonparametric in every possible sense, but it makes model complexity depend naturally on the data and kernel.

@@ -36,7 +36,7 @@ The generalization gap is $R(h)-\widehat R_n(h)$. A useful guarantee controls th
 If $Z_1,\ldots,Z_n$ are independent and $Z_i\in[a_i,b_i]$, then
 
 $$
-\Pr\left(\left|\frac1n\sum_i Z_i-mathbb E\left[\frac1n\sum_i Z_i\right]\right|\ge\varepsilon\right)
+\Pr\left(\left|\frac1n\sum_i Z_i-\mathbb E\left[\frac1n\sum_i Z_i\right]\right|\ge\varepsilon\right)
 \le 2\exp\left(-\frac{2n^2\varepsilon^2}{\sum_i(b_i-a_i)^2}\right).
 $$
 
@@ -51,7 +51,7 @@ for a fixed, data-independent $h$.
 
 ## Finite hypothesis classes
 
-For a finite class $\mathcal H$ with $|\mathcal H|=M$, a union bound yields
+For a finite class $\mathcal H$ with $\lvert\mathcal H\rvert=M$, a union bound yields
 
 $$
 \Pr\left(\sup_{h\in\mathcal H}|R(h)-\widehat R_n(h)|\ge\varepsilon\right)
@@ -131,7 +131,7 @@ y_i=f(x_i)+\varepsilon_i,
 \qquad \varepsilon_i\sim\mathcal N(0,\sigma_n^2).
 $$
 
-Let $K=K(X,X)$, $k_*=K(X,x_*)$, and $k_{**}=k(x_*,x_*)$. With a zero mean function,
+Let $K=K(X,X)$, $k_{\ast}=K(X,x_{\ast})$, and $k_{\ast\ast}=k(x_{\ast},x_{\ast})$. With a zero mean function,
 
 $$
 \begin{bmatrix}y\\f_*\end{bmatrix}
@@ -157,9 +157,11 @@ $$
 =k_{**}-k_*^\top(K+\sigma_n^2I)^{-1}k_*.
 $$
 
-For the predictive distribution of a noisy future observation $y_*$, add $\sigma_n^2$ to the variance. The posterior mean is a kernel expansion over training points, and the posterior variance quantifies epistemic uncertainty under the model.
+For the predictive distribution of a noisy future observation $y_{\ast}$, add $\sigma_n^2$ to the variance. The posterior mean is a kernel expansion over training points, and the posterior variance quantifies epistemic uncertainty under the model.
 
 Gaussian process regression can also be derived as Bayesian linear regression in a feature space. The function-space view becomes especially useful when the feature map is implicit or infinite-dimensional.
+
+{% include figure.liquid path="assets/img/notes/machine-learning/gp-and-bayesian-optimization.png" class="img-fluid rounded z-depth-1" alt="Handwritten Gaussian process regression and Bayesian optimization sketch" caption="Gaussian process regression smooths observations through a kernel; Bayesian optimization uses its surrogate distribution to select evaluations." %}
 
 ## Bayesian optimization
 

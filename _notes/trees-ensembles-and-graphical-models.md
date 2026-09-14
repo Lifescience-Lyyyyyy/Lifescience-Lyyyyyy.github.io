@@ -21,6 +21,8 @@ A decision tree contains internal decision nodes, directed branches, and leaf no
 
 Tree construction is usually greedy: at each node, choose the split that gives the largest immediate reduction in impurity. Greedy construction is computationally practical but does not guarantee a globally optimal tree.
 
+{% include figure.liquid path="assets/img/notes/machine-learning/decision-tree-sketch.png" class="img-fluid rounded z-depth-1" alt="Handwritten examples of decision trees and leaf predictions" caption="A handwritten decision-tree example: internal nodes test features and leaves return predictions." %}
+
 ### Entropy and information gain
 
 For a dataset $D$ with class proportions $p_k$,

@@ -57,6 +57,8 @@ $$
 
 PCA can equivalently be characterized as the rank-$k$ linear reconstruction minimizing squared error. The normalization $1/n$ versus $1/(n-1)$ changes eigenvalues but not eigenvectors.
 
+{% include figure.liquid path="assets/img/notes/machine-learning/pca-and-clustering-sketch.png" class="img-fluid rounded z-depth-1" alt="Handwritten PCA projection and clustering sketches" caption="Handwritten intuition for projection onto a principal direction and grouping observations around cluster centers." %}
+
 ## K-means clustering
 
 K-means minimizes within-cluster squared distances:
@@ -162,7 +164,7 @@ may be intractable. Introduce an approximate posterior $q_\phi(z\mid x)$. Then
 $$
 \log p_\theta(x)
 =\mathcal L(\theta,\phi;x)
-+D_{\mathrm{KL}}\left(q_\phi(z\mid x)\,Vert\,p_\theta(z\mid x)\right),
++D_{\mathrm{KL}}\left(q_\phi(z\mid x)\,\Vert\,p_\theta(z\mid x)\right),
 $$
 
 where the evidence lower bound is
@@ -170,7 +172,7 @@ where the evidence lower bound is
 $$
 \mathcal L(\theta,\phi;x)
 =\mathbb E_{q_\phi(z\mid x)}[\log p_\theta(x\mid z)]
--D_{\mathrm{KL}}\left(q_\phi(z\mid x)\,Vert\,p(z)\right).
+-D_{\mathrm{KL}}\left(q_\phi(z\mid x)\,\Vert\,p(z)\right).
 $$
 
 Since KL divergence is nonnegative, $\mathcal L\le\log p_\theta(x)$. The first term rewards reconstruction under the probabilistic decoder; the second regularizes the approximate posterior toward the prior.
@@ -202,6 +204,8 @@ $$
 
 Unlike a deterministic autoencoder, a VAE learns a regularized latent distribution from which new samples can be drawn.
 
+{% include figure.liquid path="assets/img/notes/machine-learning/vae-sketch.png" class="img-fluid rounded z-depth-1" alt="Handwritten VAE encoder decoder and reparameterization diagrams" caption="VAE architecture and reparameterization: noise is sampled separately, while gradients pass through the encoder parameters." %}
+
 ## Denoising diffusion probabilistic models
 
 Let $x_0$ denote data. A DDPM defines a fixed forward noising process
@@ -213,6 +217,8 @@ q(x_t\mid x_{t-1})
 $$
 
 where $\alpha_t=1-\beta_t$ and $0<\beta_t<1$. Define
+
+{% include figure.liquid path="assets/img/notes/machine-learning/diffusion-sketch.png" class="img-fluid rounded z-depth-1" alt="Handwritten diffusion forward and reverse process sketch" caption="A diffusion model gradually corrupts data in the forward chain and learns a reverse denoising process." %}
 
 $$
 \bar\alpha_t=\prod_{s=1}^t\alpha_s.

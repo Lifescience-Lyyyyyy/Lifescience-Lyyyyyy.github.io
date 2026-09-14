@@ -111,6 +111,8 @@ $$
 
 The corners of the $L_1$ constraint region make exact zeros common, so lasso can perform feature selection. Unlike ridge regression, it has no general closed-form solution and is usually optimized by coordinate descent, proximal-gradient methods, or related algorithms.
 
+{% include figure.liquid path="assets/img/notes/machine-learning/regularization-geometry.png" class="img-fluid rounded z-depth-1" alt="Handwritten sketches comparing ridge and lasso constraint geometry" caption="Handwritten geometric view of ridge and lasso regularization. The corners of the L1 region make sparse solutions more likely." %}
+
 ## Binary logistic regression
 
 For $y\in\{0,1\}$, logistic regression models a conditional probability:
@@ -201,6 +203,8 @@ $$
 $$
 
 Increasing model capacity often reduces bias but increases variance. More representative training data usually reduces variance, while regularization trades a controlled increase in bias for lower variance.
+
+{% include figure.liquid path="assets/img/notes/machine-learning/bias-variance-sketch.png" class="img-fluid rounded z-depth-1" alt="Handwritten target sketch illustrating high bias and high variance" caption="A visual mnemonic for the bias-variance trade-off from the original lecture notes." %}
 
 ## Takeaways
 
