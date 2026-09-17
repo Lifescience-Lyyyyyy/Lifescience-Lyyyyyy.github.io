@@ -18,7 +18,8 @@ nav_order: 3
 {% assign modern_physics_notes = site.notes | where: 'course', 'Introduction to Modern Physics' %}
 {% assign biochemistry_notes = site.notes | where: 'course', 'Biochemistry' %}
 {% assign cell_biology_notes = site.notes | where: 'course', 'Cell Biology' %}
-{% if machine_learning_notes.size > 0 or modern_physics_notes.size > 0 or biochemistry_notes.size > 0 or cell_biology_notes.size > 0 %}
+{% assign macroeconomics_notes = site.notes | where: 'course', 'Macroeconomics' %}
+{% if machine_learning_notes.size > 0 or modern_physics_notes.size > 0 or biochemistry_notes.size > 0 or cell_biology_notes.size > 0 or macroeconomics_notes.size > 0 %}
 
 <div class="content-entry-list">
 {% if machine_learning_notes.size > 0 %}
@@ -79,6 +80,22 @@ nav_order: 3
 <li>Signaling</li>
 <li>Development</li>
 <li>Disease</li>
+</ul>
+</div>
+</article>
+{% endif %}
+{% if macroeconomics_notes.size > 0 %}
+<article class="content-entry">
+<span>COURSE · {{ macroeconomics_notes.size }} CHAPTERS</span>
+<div>
+<h2><a href="{{ '/notes/macroeconomics/' | relative_url }}">Macroeconomics</a></h2>
+<p>An illustrated course on national income, long-run growth, money and finance, open economies, business cycles, and stabilization policy.</p>
+<ul class="entry-tags" aria-label="Course topics">
+<li>Spring 2023</li>
+<li>Economic growth</li>
+<li>Money and finance</li>
+<li>Open economy</li>
+<li>Macroeconomic policy</li>
 </ul>
 </div>
 </article>
