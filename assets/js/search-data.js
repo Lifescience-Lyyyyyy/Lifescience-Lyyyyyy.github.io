@@ -42,6 +42,96 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "notes-introduction-to-macroeconomics",
+          title: 'Introduction to Macroeconomics',
+          description: "The origins of macroeconomics, core economic principles, taxation, efficiency and equity, and the paradox of thrift.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/introduction/";
+            },},{id: "notes-income-wages-and-discrimination",
+          title: 'Income, Wages, and Discrimination',
+          description: "Compensating differentials, human capital, superstar markets, wage-setting institutions, discrimination, and labor supply.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/income-wages-discrimination/";
+            },},{id: "notes-measuring-the-cost-of-living",
+          title: 'Measuring the Cost of Living',
+          description: "Consumer price indexes, inflation, alternative deflators, indexation, real interest rates, substitution bias, and quality adjustment.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/measuring-cost-of-living/";
+            },},{id: "notes-measuring-national-income",
+          title: 'Measuring National Income',
+          description: "GDP, circular flows, expenditure and income accounting, real output, national income, and the limits of aggregate production measures.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/measuring-national-income/";
+            },},{id: "notes-production-and-growth-i-malthus-and-solow",
+          title: 'Production and Growth I: Malthus and Solow',
+          description: "Growth measurement, compound growth, the Malthusian trap, capital accumulation, and the Solow steady state.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/production-growth-malthus-solow/";
+            },},{id: "notes-production-and-growth-ii-growth-accounting-and-endogenous-growth",
+          title: 'Production and Growth II: Growth Accounting and Endogenous Growth',
+          description: "Growth accounting, total factor productivity, convergence, intertemporal choice, AK growth, and knowledge production.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/growth-accounting-endogenous-growth/";
+            },},{id: "notes-saving-investment-and-the-financial-system",
+          title: 'Saving, Investment, and the Financial System',
+          description: "Loanable funds, equity and debt, present value, mutual funds, banks, liquidity, and financial fragility.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/saving-investment-financial-system/";
+            },},{id: "notes-risk-return-and-asset-markets",
+          title: 'Risk, Return, and Asset Markets',
+          description: "Expected return, risk aversion, insurance, information asymmetry, market efficiency, and rational or behavioral bubbles.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/risk-return-asset-markets/";
+            },},{id: "notes-income-inequality-and-poverty",
+          title: 'Income Inequality and Poverty',
+          description: "Inequality and poverty measures, mobility, distributive philosophies, antipoverty programs, and incentive effects.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/income-inequality-poverty/";
+            },},{id: "notes-money-and-the-monetary-system",
+          title: 'Money and the Monetary System',
+          description: "The definition and functions of money, monetary aggregates, bank money, money demand, interest rates, and liquidity traps.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/money-monetary-system/";
+            },},{id: "notes-unemployment-and-labor-market-search",
+          title: 'Unemployment and Labor-Market Search',
+          description: "Labor-force measurement, unemployment flows, wage rigidity, Okun&#39;s law, search models, matching, and employment policy.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/unemployment-labor-market-search/";
+            },},{id: "notes-money-demand-inflation-and-monetary-neutrality",
+          title: 'Money Demand, Inflation, and Monetary Neutrality',
+          description: "Baumol–Tobin money demand, quantity theory, classical dichotomy, seigniorage, inflation costs, disinflation, and deflation.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/money-demand-inflation-neutrality/";
+            },},{id: "notes-the-income-expenditure-model",
+          title: 'The Income–Expenditure Model',
+          description: "Planned expenditure, inventory adjustment, the Keynesian cross, fiscal multipliers, and open-economy leakages.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/income-expenditure-model/";
+            },},{id: "notes-open-economy-macroeconomics",
+          title: 'Open-Economy Macroeconomics',
+          description: "Balance-of-payments accounting, net foreign investment, exchange rates, purchasing-power and interest parity, and exchange-rate regimes.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/open-economy-macroeconomics/";
+            },},{id: "notes-aggregate-demand-and-aggregate-supply",
+          title: 'Aggregate Demand and Aggregate Supply',
+          description: "Potential output, short- and long-run aggregate supply, sticky wages and prices, demand and supply shocks, and self-correction.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/aggregate-demand-supply/";
+            },},{id: "notes-monetary-and-fiscal-policy",
+          title: 'Monetary and Fiscal Policy',
+          description: "Interest-rate transmission, quantitative easing, financial stability, policy rules, budgets, fiscal multipliers, crowding out, and automatic stabilizers.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/monetary-fiscal-policy/";
+            },},{id: "notes-inflation-and-unemployment",
+          title: 'Inflation and Unemployment',
+          description: "The Phillips curve, inflation expectations, supply shocks, disinflation, the sacrifice ratio, rational expectations, and hysteresis.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/inflation-unemployment/";
+            },},{id: "notes-six-debates-over-macroeconomic-policy",
+          title: 'Six Debates over Macroeconomic Policy',
+          description: "A balanced evaluation of stabilization, fiscal stimulus, monetary rules, zero inflation, balanced budgets, and saving incentives.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/macroeconomics/six-policy-debates/";
             },},{id: "notes-introduction-to-biochemistry",
           title: 'Introduction to Biochemistry',
           description: "The chemical logic of living systems, energy flow, information flow, and the organization of metabolism.",
