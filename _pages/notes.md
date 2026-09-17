@@ -16,7 +16,8 @@ nav_order: 3
 
 {% assign machine_learning_notes = site.notes | where: 'course', 'Machine Learning' %}
 {% assign modern_physics_notes = site.notes | where: 'course', 'Introduction to Modern Physics' %}
-{% if machine_learning_notes.size > 0 or modern_physics_notes.size > 0 %}
+{% assign biochemistry_notes = site.notes | where: 'course', 'Biochemistry' %}
+{% if machine_learning_notes.size > 0 or modern_physics_notes.size > 0 or biochemistry_notes.size > 0 %}
 
 <div class="content-entry-list">
 {% if machine_learning_notes.size > 0 %}
@@ -45,6 +46,22 @@ nav_order: 3
 <li>Thermodynamics</li>
 <li>Statistical mechanics</li>
 <li>Quantum mechanics</li>
+</ul>
+</div>
+</article>
+{% endif %}
+{% if biochemistry_notes.size > 0 %}
+<article class="content-entry">
+<span>COURSE · {{ biochemistry_notes.size }} CHAPTERS</span>
+<div>
+<h2><a href="{{ '/notes/biochemistry/' | relative_url }}">Biochemistry</a></h2>
+<p>An illustrated route from molecular structure and enzyme kinetics to metabolism, biosynthesis, and whole-body metabolic regulation.</p>
+<ul class="entry-tags" aria-label="Course topics">
+<li>Fall 2023</li>
+<li>Biomolecules</li>
+<li>Enzymes</li>
+<li>Metabolism</li>
+<li>Biosynthesis</li>
 </ul>
 </div>
 </article>
