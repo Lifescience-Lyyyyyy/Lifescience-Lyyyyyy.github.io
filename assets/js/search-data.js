@@ -42,6 +42,121 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "notes-introduction-to-biochemistry",
+          title: 'Introduction to Biochemistry',
+          description: "The chemical logic of living systems, energy flow, information flow, and the organization of metabolism.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/introduction/";
+            },},{id: "notes-water-weak-interactions-and-buffers",
+          title: 'Water, Weak Interactions, and Buffers',
+          description: "Hydrogen bonding, the hydrophobic effect, acid-base equilibria, buffers, osmosis, and water in biochemical reactions.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/water/";
+            },},{id: "notes-amino-acids-peptides-and-proteins",
+          title: 'Amino Acids, Peptides, and Proteins',
+          description: "Amino-acid chemistry, ionization, peptide bonds, sequence, disulfides, and spectroscopic properties.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/amino-acids-peptides-proteins/";
+            },},{id: "notes-three-dimensional-structure-of-proteins",
+          title: 'Three-Dimensional Structure of Proteins',
+          description: "Backbone geometry, secondary and tertiary structure, folding, chaperones, collagen, and protein misfolding.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/protein-structure/";
+            },},{id: "notes-protein-function-oxygen-binding-proteins",
+          title: 'Protein Function: Oxygen-Binding Proteins',
+          description: "Ligand binding, myoglobin, hemoglobin cooperativity, allosteric regulation, oxygen transport, and hemoglobin disorders.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/oxygen-binding-proteins/";
+            },},{id: "notes-protein-function-immunoglobulins-myosin-and-actin",
+          title: 'Protein Function: Immunoglobulins, Myosin, and Actin',
+          description: "Antibody architecture and diversity followed by the molecular mechanics of actin-myosin contraction.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/immunoglobulins-myosin-actin/";
+            },},{id: "notes-protein-function-membrane-proteins-and-transport",
+          title: 'Protein Function: Membrane Proteins and Transport',
+          description: "Membrane-protein architecture, electrochemical gradients, channels, carriers, pumps, and receptor signaling.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/membrane-proteins/";
+            },},{id: "notes-enzyme-mechanisms-and-regulation",
+          title: 'Enzyme Mechanisms and Regulation',
+          description: "Transition-state stabilization, catalytic strategies, specificity, cofactors, and multiple layers of enzyme regulation.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/enzyme-mechanisms-regulation/";
+            },},{id: "notes-enzyme-kinetics",
+          title: 'Enzyme Kinetics',
+          description: "Michaelis-Menten kinetics, derivation, parameter interpretation, inhibition, multisubstrate reactions, and allostery.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/enzyme-kinetics/";
+            },},{id: "notes-carbohydrates-and-glycobiology",
+          title: 'Carbohydrates and Glycobiology',
+          description: "Monosaccharide stereochemistry, ring formation, glycosidic bonds, polysaccharides, glycoconjugates, and extracellular matrices.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/carbohydrates-glycobiology/";
+            },},{id: "notes-nucleotides-and-nucleic-acids",
+          title: 'Nucleotides and Nucleic Acids',
+          description: "Nucleotide chemistry, DNA and RNA structure, base pairing, higher-order conformations, melting, and nucleic-acid catalysis.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/nucleotides-nucleic-acids/";
+            },},{id: "notes-lipids",
+          title: 'Lipids',
+          description: "Fatty acids, storage lipids, membrane lipids, sterols, lipid signals, vitamins, and analytical methods.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/lipids/";
+            },},{id: "notes-principles-of-metabolism",
+          title: 'Principles of Metabolism',
+          description: "Free energy, ATP, phosphoryl transfer, redox cofactors, pathway organization, and metabolic control.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/metabolism-principles/";
+            },},{id: "notes-glycolysis-gluconeogenesis-and-the-pentose-phosphate-pathway",
+          title: 'Glycolysis, Gluconeogenesis, and the Pentose Phosphate Pathway',
+          description: "The reactions and energetics of glycolysis, fermentation, gluconeogenic bypasses, and pentose-phosphate metabolism.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/glycolysis/";
+            },},{id: "notes-metabolic-regulation-and-glycogen-metabolism",
+          title: 'Metabolic Regulation and Glycogen Metabolism',
+          description: "Hormonal control of glycolysis and gluconeogenesis, glycogen synthesis and breakdown, and tissue-specific regulation.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/metabolic-regulation-glycogen/";
+            },},{id: "notes-pyruvate-oxidation-and-the-citric-acid-cycle",
+          title: 'Pyruvate Oxidation and the Citric Acid Cycle',
+          description: "Pyruvate dehydrogenase, the eight reactions of the citric acid cycle, regulation, amphibolic function, and anaplerosis.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/citric-acid-cycle/";
+            },},{id: "notes-fatty-acid-catabolism",
+          title: 'Fatty Acid Catabolism',
+          description: "Lipid mobilization, mitochondrial entry, beta oxidation, unsaturated and odd-chain fatty acids, ketone bodies, and pathway regulation.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/fatty-acid-catabolism/";
+            },},{id: "notes-amino-acid-oxidation-and-the-urea-cycle",
+          title: 'Amino Acid Oxidation and the Urea Cycle',
+          description: "Protein turnover, transamination, ammonia transport, oxidative deamination, and the complete urea cycle.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/amino-acid-oxidation-urea/";
+            },},{id: "notes-amino-acid-degradation-and-one-carbon-metabolism",
+          title: 'Amino Acid Degradation and One-Carbon Metabolism',
+          description: "Carbon-skeleton entry points, glucogenic and ketogenic amino acids, folate and SAM chemistry, and selected metabolic disorders.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/amino-acid-degradation/";
+            },},{id: "notes-oxidative-phosphorylation",
+          title: 'Oxidative Phosphorylation',
+          description: "Electron-transfer complexes, proton-motive force, ATP synthase, transport shuttles, inhibitors, uncoupling, and reactive oxygen species.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/oxidative-phosphorylation/";
+            },},{id: "notes-lipid-biosynthesis",
+          title: 'Lipid Biosynthesis',
+          description: "A completed chapter on fatty-acid, triacylglycerol, phospholipid, sphingolipid, cholesterol, lipoprotein, and steroid biosynthesis.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/lipid-biosynthesis/";
+            },},{id: "notes-biosynthesis-of-amino-acids-nucleotides-and-related-molecules",
+          title: 'Biosynthesis of Amino Acids, Nucleotides, and Related Molecules',
+          description: "Nitrogen fixation and assimilation, amino-acid families, porphyrins, purines, pyrimidines, deoxyribonucleotides, and pathway regulation.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/amino-acid-nucleotide-biosynthesis/";
+            },},{id: "notes-hormonal-regulation-and-integration-of-mammalian-metabolism",
+          title: 'Hormonal Regulation and Integration of Mammalian Metabolism',
+          description: "Insulin, glucagon, epinephrine, tissue specialization, feeding, fasting, starvation, exercise, diabetes, and adipose signaling.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/biochemistry/hormonal-metabolic-integration/";
             },},{id: "notes-linear-and-logistic-regression",
           title: 'Linear and Logistic Regression',
           description: "Least squares, regularization, probabilistic classification, softmax regression, and the bias-variance trade-off.",
