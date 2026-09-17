@@ -1,0 +1,17 @@
+{% assign figures = site.data.cell_biology_figures | where: 'slug', include.slug %}
+{% if figures.size > 0 %}
+  <div class="cell-biology-figure-grid" aria-label="Illustrated reference for {{ include.title }}">
+    {% for figure in figures %}
+      <figure>
+        <a href="{{ figure.src | relative_url }}" class="venobox" data-gall="{{ include.slug }}-figures">
+          <img
+            src="{{ figure.src | relative_url }}"
+            loading="lazy"
+            alt="{{ figure.alt }}"
+          >
+        </a>
+        <figcaption>Figure {{ figure.number }} · {{ figure.caption }}</figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+{% endif %}

@@ -17,7 +17,8 @@ nav_order: 3
 {% assign machine_learning_notes = site.notes | where: 'course', 'Machine Learning' %}
 {% assign modern_physics_notes = site.notes | where: 'course', 'Introduction to Modern Physics' %}
 {% assign biochemistry_notes = site.notes | where: 'course', 'Biochemistry' %}
-{% if machine_learning_notes.size > 0 or modern_physics_notes.size > 0 or biochemistry_notes.size > 0 %}
+{% assign cell_biology_notes = site.notes | where: 'course', 'Cell Biology' %}
+{% if machine_learning_notes.size > 0 or modern_physics_notes.size > 0 or biochemistry_notes.size > 0 or cell_biology_notes.size > 0 %}
 
 <div class="content-entry-list">
 {% if machine_learning_notes.size > 0 %}
@@ -62,6 +63,22 @@ nav_order: 3
 <li>Enzymes</li>
 <li>Metabolism</li>
 <li>Biosynthesis</li>
+</ul>
+</div>
+</article>
+{% endif %}
+{% if cell_biology_notes.size > 0 %}
+<article class="content-entry">
+<span>COURSE · {{ cell_biology_notes.size }} CHAPTERS</span>
+<div>
+<h2><a href="{{ '/notes/cell-biology/' | relative_url }}">Cell Biology</a></h2>
+<p>An illustrated course on cellular architecture, membrane dynamics, gene control, signaling, development, cancer, stem cells, and immunity.</p>
+<ul class="entry-tags" aria-label="Course topics">
+<li>Spring 2024</li>
+<li>Cellular organization</li>
+<li>Signaling</li>
+<li>Development</li>
+<li>Disease</li>
 </ul>
 </div>
 </article>
