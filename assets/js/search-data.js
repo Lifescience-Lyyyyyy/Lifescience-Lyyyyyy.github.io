@@ -157,6 +157,101 @@ ninja.data = [{
           description: "Insulin, glucagon, epinephrine, tissue specialization, feeding, fasting, starvation, exercise, diabetes, and adipose signaling.",
           section: "Notes",handler: () => {
               window.location.href = "/notes/biochemistry/hormonal-metabolic-integration/";
+            },},{id: "notes-cellular-unity-and-diversity",
+          title: 'Cellular Unity and Diversity',
+          description: "Cell theory, the three domains of life, genome evolution, endosymbiosis, and the logic of model organisms.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/cellular-unity-diversity/";
+            },},{id: "notes-techniques-in-cell-biology",
+          title: 'Techniques in Cell Biology',
+          description: "Specimen preparation, fluorescence and electron microscopy, molecular localization, live-cell measurements, and flow cytometry.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/cell-biology-techniques/";
+            },},{id: "notes-analyzing-cells-molecules-and-systems",
+          title: 'Analyzing Cells, Molecules, and Systems',
+          description: "Protein analysis, structural biology, DNA manipulation, sequencing, genetics, and functional perturbation.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/analyzing-cells-molecules-systems/";
+            },},{id: "notes-the-cytoskeleton",
+          title: 'The Cytoskeleton',
+          description: "Actin, microtubules, intermediate filaments, molecular motors, cell polarity, and migration.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/cytoskeleton/";
+            },},{id: "notes-biomembranes",
+          title: 'Biomembranes',
+          description: "Lipid bilayer organization, membrane asymmetry and fluidity, membrane proteins, domains, and curvature.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/biomembranes/";
+            },},{id: "notes-membrane-transport",
+          title: 'Membrane Transport',
+          description: "Channels, carriers, pumps, electrochemical gradients, action potentials, synaptic transmission, and patch clamp.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/membrane-transport/";
+            },},{id: "notes-intracellular-compartments-and-protein-sorting",
+          title: 'Intracellular Compartments and Protein Sorting',
+          description: "Organelle topology and protein targeting to the nucleus, mitochondria, chloroplasts, and peroxisomes.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/intracellular-compartments-protein-sorting/";
+            },},{id: "notes-intracellular-membrane-traffic",
+          title: 'Intracellular Membrane Traffic',
+          description: "Coats, Rab and SNARE specificity, ER–Golgi transport, lysosomes, autophagy, endocytosis, and regulated secretion.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/intracellular-membrane-traffic/";
+            },},{id: "notes-the-nucleus-and-chromosomes",
+          title: 'The Nucleus and Chromosomes',
+          description: "Nuclear organization, nucleosomes, chromatin remodeling, epigenetic inheritance, chromosome folding, and genome evolution.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/nucleus-chromosomes/";
+            },},{id: "notes-the-endoplasmic-reticulum",
+          title: 'The Endoplasmic Reticulum',
+          description: "ER translocation, membrane-protein topology, glycosylation, folding quality control, the unfolded-protein response, and lipid synthesis.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/endoplasmic-reticulum/";
+            },},{id: "notes-control-of-gene-expression",
+          title: 'Control of Gene Expression',
+          description: "Transcription, RNA processing, regulatory DNA, cell memory, post-transcriptional control, and small RNAs.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/control-gene-expression/";
+            },},{id: "notes-cell-signaling",
+          title: 'Cell Signaling',
+          description: "Signal modes, molecular switches, GPCRs, RTKs, MAPK, PI3K, JAK–STAT, TGF-β, Notch, Wnt, Hedgehog, and NF-κB.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/cell-signaling/";
+            },},{id: "notes-the-cell-cycle",
+          title: 'The Cell Cycle',
+          description: "Cyclin–CDK control, DNA replication, mitosis, checkpoints, cytokinesis, and extracellular control of proliferation.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/cell-cycle/";
+            },},{id: "notes-cell-death",
+          title: 'Cell Death',
+          description: "Apoptosis, pyroptosis, necroptosis, ferroptosis, necrosis, and their developmental and disease roles.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/cell-death/";
+            },},{id: "notes-cell-junctions-and-the-extracellular-matrix",
+          title: 'Cell Junctions and the Extracellular Matrix',
+          description: "Cadherins, tight and gap junctions, extracellular-matrix architecture, integrins, mechanotransduction, and plant cell walls.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/cell-junctions-extracellular-matrix/";
+            },},{id: "notes-cancer",
+          title: 'Cancer',
+          description: "Tumor evolution, cancer genes, heterogeneity, metastasis, metabolism, targeted treatment, immunotherapy, and experimental models.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/cancer/";
+            },},{id: "notes-development-and-stem-cells",
+          title: 'Development and Stem Cells',
+          description: "Pattern formation, morphogens, morphogenesis, neural development, pluripotency, and cellular reprogramming.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/development-stem-cells/";
+            },},{id: "notes-the-immune-system",
+          title: 'The Immune System',
+          description: "Innate recognition, inflammation, lymphocyte development, antigen receptors, germinal centers, affinity maturation, and T-cell help.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/immune-system/";
+            },},{id: "notes-stem-cells-and-tissue-renewal",
+          title: 'Stem Cells and Tissue Renewal',
+          description: "Intestinal stem cells, connective tissue, bone and muscle renewal, angiogenesis, hematopoiesis, and regeneration.",
+          section: "Notes",handler: () => {
+              window.location.href = "/notes/cell-biology/stem-cells-tissue-renewal/";
             },},{id: "notes-linear-and-logistic-regression",
           title: 'Linear and Logistic Regression',
           description: "Least squares, regularization, probabilistic classification, softmax regression, and the bias-variance trade-off.",
