@@ -17,6 +17,9 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    {% if page.permalink == '/' %}
+      <div class="neural-background" aria-hidden="true"><canvas id="neural-background-canvas"></canvas></div>
+    {% endif %}
     <!-- Header -->
     {% include header.liquid %}
 
@@ -52,5 +55,8 @@
 
     <!-- JavaScripts -->
     {% include scripts.liquid %}
+    {% if page.permalink == '/' %}
+      <script src="{{ '/assets/js/neural-background.js' | relative_url }}" defer></script>
+    {% endif %}
   </body>
 </html>

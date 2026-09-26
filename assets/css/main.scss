@@ -145,142 +145,24 @@ article > h2,
   }
 }
 
-.neural-feature {
-  align-items: center;
-  background: radial-gradient(circle at 83% 48%, rgba(66, 169, 161, 0.1), transparent 37%), var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
-  border-radius: 20px;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
-  margin: 0 0 3rem;
+
+.neural-background {
+  inset: 0;
   overflow: hidden;
-  padding: clamp(1.5rem, 3vw, 2.3rem);
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+
+  canvas {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
 }
 
-.neural-feature-copy {
+.neural-background ~ .container[role="main"] {
   position: relative;
   z-index: 1;
-
-  h2 {
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 500;
-    letter-spacing: -0.03em;
-    line-height: 1.08;
-    margin: 0 0 0.85rem;
-  }
-
-  > p:last-child {
-    color: var(--global-text-color-light);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin: 0;
-  }
-}
-
-.neural-illustration {
-  display: block;
-  height: auto;
-  max-height: 260px;
-  overflow: visible;
-  width: 100%;
-
-  .neural-dendrites,
-  .neural-axon,
-  .neural-brain-outline,
-  .neural-brain-fold,
-  .neural-brain-link {
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .neural-dendrites {
-    stroke: var(--global-text-color-light);
-    stroke-width: 2.5;
-  }
-
-  .neural-soma {
-    fill: var(--global-card-bg-color);
-    stroke: var(--global-theme-color);
-    stroke-width: 3;
-  }
-
-  .neural-nucleus,
-  .neural-synapse,
-  .neural-node {
-    fill: var(--global-theme-color);
-  }
-
-  .neural-axon {
-    stroke: var(--global-text-color-light);
-    stroke-width: 2.5;
-  }
-
-  .neural-impulse {
-    animation: neural-signal 4.5s linear infinite;
-    fill: none;
-    stroke: url(#neural-signal-gradient);
-    stroke-dasharray: 22 460;
-    stroke-linecap: round;
-    stroke-width: 5;
-  }
-
-  .neural-brain-outline {
-    stroke: var(--global-theme-color);
-    stroke-width: 3;
-  }
-
-  .neural-brain-fold {
-    opacity: 0.65;
-    stroke: var(--global-text-color-light);
-    stroke-width: 2;
-  }
-
-  .neural-brain-link {
-    opacity: 0.55;
-    stroke: var(--global-theme-color);
-    stroke-width: 1.8;
-  }
-
-  .neural-node,
-  .neural-synapse {
-    animation: neural-fire 4.5s ease-in-out infinite;
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-
-  .neural-synapse-one { animation-delay: 0.9s; }
-  .neural-synapse-two { animation-delay: 1.8s; }
-  .neural-node-one { animation-delay: 2.45s; }
-  .neural-node-two { animation-delay: 2.7s; }
-  .neural-node-three { animation-delay: 2.95s; }
-  .neural-node-four { animation-delay: 3.2s; }
-  .neural-node-five { animation-delay: 3.45s; }
-  .neural-node-six { animation-delay: 3.7s; }
-}
-
-@keyframes neural-signal {
-  from { stroke-dashoffset: 460; }
-  to { stroke-dashoffset: 0; }
-}
-
-@keyframes neural-fire {
-  0%, 10%, 40%, 100% { opacity: 0.55; transform: scale(1); }
-  20% { opacity: 1; transform: scale(1.7); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .neural-illustration .neural-impulse,
-  .neural-illustration .neural-node,
-  .neural-illustration .neural-synapse {
-    animation: none;
-  }
-
-  .neural-illustration .neural-impulse {
-    stroke-dasharray: none;
-    stroke-width: 3;
-  }
 }
 
 .metric-list,
@@ -534,14 +416,6 @@ article > h2,
 }
 
 @media (max-width: 767px) {
-  .neural-feature {
-    grid-template-columns: 1fr;
-  }
-
-  .neural-illustration {
-    max-height: 220px;
-  }
-
   .hero-layout {
     grid-template-columns: 1fr;
   }
