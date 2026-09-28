@@ -13,9 +13,9 @@
       institution: Peking University, Beijing, China
       year: 2022 – 2026
       description:
-        - Overall GPA: 3.85 / 4.0
-        - Minor GPA: 3.84 / 4.0
-        - Weighted Average: 91.9 / 100.0
+        - "Overall GPA: 3.85 / 4.0"
+        - "Minor GPA: 3.84 / 4.0"
+        - "Weighted Average: 91.9 / 100.0"
         - Leo KoGuan Scholarship (2024)
         - National Scholarship (2023)
         - Second Prize, Chinese Mathematics Competitions (2024)
@@ -23,6 +23,12 @@
 - title: Research Experience
   type: time_table
   contents:
+    - title: "MaleCNS4EEG: Connectome-Informed EEG Decoding"
+      maindescription: Independent Research
+      year: 2026
+      description:
+        - Built a motor-imagery EEG decoder using the MaleCNS directed connectome as a recurrent reservoir with a fixed neural readout.
+        - Benchmarked the real connectome against degree-preserving rewired and random-graph controls on BCI Competition IV datasets.
     - title: Closed-Loop Active Learning for Sparse Neural Encoding in Macaque AIT Cortex
       institution: Peking University — supervised by Prof. Shiming Tang
       year: 2025 – 2026
@@ -118,6 +124,6 @@
         - AI Methods and Applications in Life Sciences (A)
         - Mathematical Modeling in Life Sciences (A)
         - Fundamentals of Network Science and Systems Biology (A)
-        - NeuroAI: From Brain Science to Brain-Inspired Intelligence (90)
+        - "NeuroAI: From Brain Science to Brain-Inspired Intelligence (90)"
       description:
         - "* denotes graduate-level courses"
