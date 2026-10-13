@@ -224,6 +224,7 @@ article > h2,
   p {
     color: var(--global-text-color-light);
     font-size: 0.92rem;
+    grid-column: 2;
     line-height: 1.65;
     margin: 0;
   }
@@ -439,6 +440,10 @@ article > h2,
 
   .metric-card {
     padding: 1.2rem;
+  }
+
+  .focus-card p {
+    grid-column: 1;
   }
 
   .hero-actions {

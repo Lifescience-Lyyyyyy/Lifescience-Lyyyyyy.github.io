@@ -11,6 +11,9 @@
           {% endfor %}
         </ul>
       {% endif %}
+      {% if content.description %}
+        <p class="ml-3 mt-2 mb-0 small">{{ content.description }}</p>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>

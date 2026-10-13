@@ -23,12 +23,6 @@
 - title: Research Experience
   type: time_table
   contents:
-    - title: "MaleCNS4EEG: Connectome-Informed EEG Decoding"
-      maindescription: Independent Research
-      year: 2026
-      description:
-        - Built a motor-imagery EEG decoder using the MaleCNS directed connectome as a recurrent reservoir with a fixed neural readout.
-        - Benchmarked the real connectome against degree-preserving rewired and random-graph controls on BCI Competition IV datasets.
     - title: Closed-Loop Active Learning for Sparse Neural Encoding in Macaque AIT Cortex
       institution: Peking University — supervised by Prof. Shiming Tang
       year: 2025 – 2026
@@ -119,11 +113,10 @@
         - Early and Mid-Level Computer Vision (90)
         - Data Structure and Algorithm (87)
         - Directed Research in AI System (86)
+      description: "* indicates courses taken jointly by undergraduate and graduate students."
     - title: Life Sciences & Interdisciplinary
       items:
         - AI Methods and Applications in Life Sciences (A)
         - Mathematical Modeling in Life Sciences (A)
         - Fundamentals of Network Science and Systems Biology (A)
         - "NeuroAI: From Brain Science to Brain-Inspired Intelligence (90)"
-      description:
-        - "* denotes graduate-level courses"
